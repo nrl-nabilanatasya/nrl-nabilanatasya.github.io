@@ -1,0 +1,258 @@
+:root {
+    --text-font-size: 14px; /* regilar text font size */
+    --text-color: #000; /* regular text color */
+
+    --slide-background: #fff; /* content background color */
+
+    --icons-color: #fff; /* icons color */
+    --about-slide-icon: "\eb22"; /* unicode for the about slide icon */
+    --faq-slide-icon: "\eae7"; /* unicode for the faq slide icon */
+    --navi-slide-icon: "\eca1"; /* unicode for the navi slide icon */
+    --blogroll-slide-icon: "\ea11"; /* unicode for the blogroll slide icon */
+
+    --main-color-one: #5d576b;
+    --main-color-two: #d496a7; 
+    --main-color-three: #f1dede;
+}
+
+body {
+    margin: 0;
+    font-size: var(--text-font-size);
+    color: var(--text-color);
+}
+
+#carousel {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+#carousel .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+section {
+    overflow: auto;
+    position: relative;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    background: var(--slide-background);
+}
+
+section:nth-child(odd) {
+    background: var(--odd-slide-background);
+}
+
+section:nth-child(even) {
+    background: var(--even-slide-background);
+    flex-direction: row-reverse;
+}
+
+section .sidebar { /* section .pictogram {} */
+    height: 100%;
+    width: 40%;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+}
+section:nth-child(odd) .sidebar {
+    background: linear-gradient(
+        to top,
+        var(--main-color-one) 50%,
+        var(--main-color-three) 50%
+    );
+    background-size: 100% 200%;
+    background-position: 0% 100%;
+    transition: all 1.5s ease;
+}
+
+section:nth-child(even) .sidebar {
+    background: linear-gradient(
+        to top,
+        var(--main-color-three) 50%,
+        var(--main-color-one) 50%
+    );
+    background-size: 100% 200%;
+    background-position: 0% 100%;
+    transition: all 1.5s ease;
+}
+
+section .sidebar-icon-background {
+    text-align: center;
+    padding: 20px;
+    border-radius: 70px;
+}
+
+section:nth-child(odd) .sidebar-icon-background {
+    transition: all 0.9s ease;
+    transition-delay: 0.4s;
+}
+
+section:nth-child(even) .sidebar-icon-background {
+    transition: all 0.9s ease;
+    transition-delay: 0.4s;
+}
+
+section:nth-child(odd) .sidebar-icon-background,
+section:first-of-type .sidebar-bottom-nav label:first-of-type,
+section:nth-of-type(3) .sidebar-bottom-nav label:nth-of-type(3) {
+    background: linear-gradient(
+        to right,
+        var(--main-color-one) 50%,
+        var(--main-color-two) 50%
+    );
+    background-size: 200% 100%;
+    background-position: 100%;
+}
+
+section:nth-child(even) .sidebar-icon-background,
+section:nth-of-type(2) .sidebar-bottom-nav label:nth-of-type(2),
+section:nth-of-type(4) .sidebar-bottom-nav label:nth-of-type(4) {
+    background: linear-gradient(
+        to right,
+        var(--main-color-three) 50%,
+        var(--main-color-one) 50%
+    );
+    background-size: 200% 100%;
+    background-position: 100%;
+}
+
+section .sidebar .sidebar-icon {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+}
+
+section .sidebar .sidebar-icon::before {
+    color: var(--icons-color);
+    font-size: 70px;
+    font-family: "cappuccicons";
+}
+
+/* icons start */
+section:first-of-type .sidebar .sidebar-icon::before,
+section .sidebar-bottom-nav label[for="switch_1"]::before,
+section nav label[for="switch_1"]::after {
+    content: var(--about-slide-icon);
+}
+
+section:nth-of-type(2) .sidebar .sidebar-icon::before,
+section .sidebar-bottom-nav label[for="switch_2"]::before,
+section nav label[for="switch_2"]::after {
+    content: var(--faq-slide-icon);
+}
+
+section:nth-of-type(3) .sidebar .sidebar-icon::before,
+section .sidebar-bottom-nav label[for="switch_3"]::before,
+section nav label[for="switch_3"]::after {
+    content: var(--navi-slide-icon);
+}
+
+section:nth-of-type(4) .sidebar .sidebar-icon::before,
+section .sidebar-bottom-nav label[for="switch_4"]::before,
+section nav label[for="switch_4"]::after {
+    content: var(--blogroll-slide-icon);
+}
+/* icons end */
+
+section:nth-child(odd) .sidebar-bottom-nav {
+    background: linear-gradient(
+        to right,
+        var(--main-color-two) 50%,
+        var(--main-color-three) 50%
+    );
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: all 1s ease;
+    transition-delay: 1s;
+}
+
+section .sidebar .sidebar-bottom-nav {
+    /* NAVIGATION POSITION AT SIDE BOTTOM */
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section:nth-child(even) .sidebar-bottom-nav {
+    background: linear-gradient(
+        to right,
+        var(--main-color-two) 50%,
+        var(--main-color-three)
+    );
+    background-size: 200% 100%;
+    background-position: 0%;
+    transition: all 1s ease;
+    transition-delay: 1s;
+}
+
+section .sidebar-bottom-nav label {
+    color: var(--icons-color);
+    margin: 0px 5px;
+    height: 25px;
+    width: 25px;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+section .sidebar-bottom-nav label::before {
+    font-family: "cappuccicons";
+    font-size: 25px;
+}
+
+section:nth-child(odd) .sidebar-bottom-nav label:hover {
+    background: var(--main-color-one);
+}
+
+section:nth-child(even) .sidebar-bottom-nav label:hover {
+    background: var(--main-color-three);
+}
+
+/* section:first-of-type .sidebar-bottom-nav label:first-of-type,
+section:nth-of-type(3) .sidebar-bottom-nav label:nth-of-type(3) {
+    transition: all 0.8s ease;
+    transition-delay: 1.1s;
+} */
+
+/* section:nth-of-type(2) .sidebar-bottom-nav label:nth-of-type(2),
+section:nth-of-type(4) .sidebar-bottom-nav label:nth-of-type(4) {
+    transition: all 0.8s ease;
+    transition-delay: 1.1s;
+} */
+
+/* page animation when click on navigation */
+#switch_1:checked ~ #carousel .wrapper {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+
+#switch_2:checked ~ #carousel .wrapper {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+#switch_3:checked ~ #carousel .wrapper {
+    -webkit-transform: translateY(-200%);
+    -ms-transform: translateY(-200%);
+    transform: translateY(-200%);
+}
+
+#switch_4:checked ~ #carousel .wrapper {
+    -webkit-transform: translateY(-300%);
+    -ms-transform: translateY(-300%);
+    transform: translateY(-300%);
+}
