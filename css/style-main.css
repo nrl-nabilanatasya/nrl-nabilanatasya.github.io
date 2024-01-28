@@ -1,8 +1,12 @@
 :root {
-    --text-font-size: 14px; /* regilar text font size */
+    --text-font-size: 14px; /* regular text font size */
     --text-color: #000; /* regular text color */
 
-    --slide-background: #fff; /* content background color */
+    --title-font-size: 35px; /* font size for the title text */
+    --title-font: "Staatliches"; /* title text font */
+
+    --odd-slide-background: #fff; /* background for the content of odd slides */
+    --even-slide-background: #f4f7fc; /* background for the content of even slides */
 
     --icons-color: #fff; /* icons color */
     --about-slide-icon: "\eb22"; /* unicode for the about slide icon */
@@ -52,7 +56,7 @@ section:nth-child(even) {
     flex-direction: row-reverse;
 }
 
-section .sidebar { /* section .pictogram {} */
+section .sidebar {
     height: 100%;
     width: 40%;
     position: relative;
@@ -61,6 +65,7 @@ section .sidebar { /* section .pictogram {} */
     justify-content: center;
     vertical-align: top;
 }
+
 section:nth-child(odd) .sidebar {
     background: linear-gradient(
         to top,
@@ -161,6 +166,17 @@ section nav label[for="switch_4"]::after {
 }
 /* icons end */
 
+section .sidebar .sidebar-bottom-nav {
+    /* NAVIGATION POSITION AT SIDE BOTTOM */
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 section:nth-child(odd) .sidebar-bottom-nav {
     background: linear-gradient(
         to right,
@@ -171,17 +187,6 @@ section:nth-child(odd) .sidebar-bottom-nav {
     background-position: 100%;
     transition: all 1s ease;
     transition-delay: 1s;
-}
-
-section .sidebar .sidebar-bottom-nav {
-    /* NAVIGATION POSITION AT SIDE BOTTOM */
-    width: 100%;
-    height: 10%;
-    bottom: 0;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 section:nth-child(even) .sidebar-bottom-nav {
@@ -255,4 +260,39 @@ section:nth-of-type(4) .sidebar-bottom-nav label:nth-of-type(4) {
     -webkit-transform: translateY(-300%);
     -ms-transform: translateY(-300%);
     transform: translateY(-300%);
+}
+
+section .content {
+    width: 60%;
+    height: 100%;
+    overflow: auto;
+    display: inline-block;
+    vertical-align: top;
+    z-index: 99;
+}
+
+section:nth-child(even) .content {
+    margin-left: 0;
+}
+
+section .content h2 {
+    font-size: var(--title-font-size);
+    font-family: var(--title-font);
+    letter-spacing: 2px;
+    padding: 15px 25px;
+    margin: 0;
+    width: 60%;
+    position: fixed;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+section:nth-child(odd) .content h2 {
+    color: var(--main-color-two);
+    background: var(--odd-slide-background);
+}
+
+section:nth-child(even) .content h2 {
+    background: var(--even-slide-background);
+    color: var(--main-color-one);
 }
