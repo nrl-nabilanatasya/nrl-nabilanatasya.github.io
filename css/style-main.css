@@ -1,5 +1,6 @@
 :root {
     --text-font-size: 14px; /* regular text font size */
+    --body-font: "Roboto Mono"; /* regular text font */
     --text-color: #000; /* regular text color */
 
     --title-font-size: 35px; /* font size for the title text */
@@ -262,7 +263,7 @@ section:nth-of-type(4) .sidebar-bottom-nav label:nth-of-type(4) {
     transform: translateY(-300%);
 }
 
-section .content {
+section .main {
     width: 60%;
     height: 100%;
     overflow: auto;
@@ -271,11 +272,11 @@ section .content {
     z-index: 99;
 }
 
-section:nth-child(even) .content {
+section:nth-child(even) .main {
     margin-left: 0;
 }
 
-section .content h2 {
+section .main h2 {
     font-size: var(--title-font-size);
     font-family: var(--title-font);
     letter-spacing: 2px;
@@ -287,12 +288,20 @@ section .content h2 {
     z-index: 1;
 }
 
-section:nth-child(odd) .content h2 {
+section:nth-child(odd) .main h2 {
     color: var(--main-color-two);
     background: var(--odd-slide-background);
 }
 
-section:nth-child(even) .content h2 {
+section:nth-child(even) .main h2 {
     background: var(--even-slide-background);
     color: var(--main-color-one);
+}
+
+section .main .content {
+    font-family: var(--body-font);
+    text-align: justify; /* 29-01-2024 nurul add */
+    padding: 0px 25px 15px 25px;
+    box-sizing: border-box;
+    margin-top: 80px;
 }
