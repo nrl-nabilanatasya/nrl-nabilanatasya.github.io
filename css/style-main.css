@@ -299,9 +299,36 @@ section:nth-child(even) .main h2 {
 }
 
 section .main .content {
+    /* Font and Text Alignment */
     font-family: var(--body-font);
-    text-align: justify; /* 29-01-2024 nurul add */
+    text-align: justify;
+
+    /* Padding and Box Sizing */
     padding: 0px 25px 15px 25px;
     box-sizing: border-box;
+
+    /* Margin for Spacing */
     margin-top: 80px;
+}
+
+#color {
+    /* Positioning */
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+
+    /* Dimensions and Appearance */
+    width: 33px;
+    height: 33px;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    /* Background Image */
+    background-image: url("https://i.pinimg.com/564x/89/fb/94/89fb94cc90c8e3ac798959c246220a2b.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 35px;
+
+    /* Transition Effect */
+    transition: all 0.5s ease-in-out;
 }
