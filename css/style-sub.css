@@ -78,7 +78,7 @@ section .main .timeline {
     position: absolute;
     top: 25px;
     left: -26px;
-    border-top: 1px dashed var(--main-color-two);
+    border-top: 1px dashed #ddd;
 }
 
 .timeline-wrapper li:not(:last-child)::before {
@@ -88,7 +88,7 @@ section .main .timeline {
   left: -26.5px;
   width: 1px;
   height: calc(100% + 30px);
-  border-left: 1px dashed var(--main-color-two);
+  border-left: 1px dashed #ddd;
 }
 
 .timeline-wrapper li:last-child::before {
@@ -98,7 +98,7 @@ section .main .timeline {
   left: -26.5px;
   width: 1px;
   height: 55px;
-  border-left: 1px dashed var(--main-color-two);
+  border-left: 1px dashed #ddd;
 }
 
 .timeline-wrapper .timeline-title {
@@ -106,6 +106,9 @@ section .main .timeline {
   padding: 10px 10px 7px 45px;
   display: inline-block;
   vertical-align: top;
+  width: calc(100% - 0px); /* Set a width relative to the padding */
+  max-width: 400px; /* Set a maximum width if needed */
+  box-sizing: border-box; 
 }
 
 .timeline-wrapper .timeline-title label {
