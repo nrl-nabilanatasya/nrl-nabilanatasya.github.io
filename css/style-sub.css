@@ -1,6 +1,149 @@
 /* style for first section */
+section#first a {
+    background: linear-gradient(
+        to right,
+        var(--main-color-three) 50%,
+        var(--main-color-one) 50%
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+section#first a:hover {
+    background-position: 0%;
+}
 
 /* style for second section */
+section:nth-of-type(2) .main {
+    width: 60%;
+    height: 100%;
+    overflow: auto;
+    display: flex; /* Use flexbox */
+    z-index: 99;
+}
+
+section .main .timeline {
+    flex: 1; /* Each ce-section takes up an equal share of the available space */
+    font-family: var(--body-font);
+    padding: 0px 25px 15px 10px;
+    box-sizing: border-box;
+    margin-top: 80px;
+    text-align: justify;
+}
+
+.timeline-wrapper {
+  position: relative;
+}
+
+.timeline-wrapper:after {
+  position: absolute;
+  top: 10px;
+  bottom: 35px; /* 0 */
+  left: 0;
+  width: 1px;
+  content: "";
+  border-left: 1px dashed var(--main-color-two);
+}
+
+.timeline-wrapper h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0 0 20px 25px;
+}
+.timeline-wrapper h3:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 10px;
+  left: -6px;
+  border-radius: 50%;
+  z-index: 1;
+  background:var(--main-color-one);
+}
+
+.timeline-wrapper ul {
+  margin: 0 0 0px 25px;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline-wrapper li {
+  position: relative;
+  padding: 0;
+  border: 1px solid #ddd;
+  border-bottom: 4px solid #ddd;
+  margin-bottom: 23px;
+}
+
+.timeline-wrapper li:after {
+    content: "";
+    width: 25px;
+    height: 1px;
+    position: absolute;
+    top: 25px;
+    left: -26px;
+    border-top: 1px dashed var(--main-color-two);
+}
+
+.timeline-wrapper .timeline-title {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 10px 7px 45px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.timeline-wrapper .timeline-title label {
+  margin: 0;
+  font-size: 12px;
+  float: right;
+  width: 100%;
+}
+
+.timeline-wrapper .timeline-title span {
+  font-weight: 500;
+  font-size: 16px;
+  float: left;
+  line-height: normal;
+  margin-bottom: 2px;
+}
+
+.timeline-wrapper .timeline-title i {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  z-index: 1;
+  background: var(--main-color-one);
+}
+
+.timeline-wrapper .timeline-info {
+  padding: 15px 20px;
+  font-size: 13px;
+}
+
+.timeline-wrapper .timeline-info p {
+  margin: 0;
+  color: #878C9F;
+  text-align: left;
+}
+
+.timeline-info h6 {
+  margin: 0 0 12px 0;
+  font-weight: 500;
+  font-size: 15px;
+  color: #292929;
+  
+}
 
 /* style for third section */
 
