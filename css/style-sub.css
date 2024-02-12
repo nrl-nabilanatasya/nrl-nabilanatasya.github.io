@@ -16,6 +16,47 @@ section#first a:hover {
     background-position: 0%;
 }
 
+.rotating-text {
+  flex: 1;
+    font-family: var(--body-font);
+    padding: 0px 25px 15px 25px;
+    box-sizing: border-box;
+    margin-top: 80px;
+
+  /* font-weight: 600; */
+  font-size: 30px;
+
+  /* width: 500px; */ /* Set a fixed width */
+  /* margin: 80px auto 0 auto; */ /* Maintain top margin, center horizontally */
+}
+.rotating-text p {
+  display: inline-flex;
+  margin: 0;
+  vertical-align: top;
+}
+/* .rotating-text p:nth-child(2) {
+  margin-top: 10px;
+} */
+.rotating-text p .word {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  color: var(--main-color-one);
+}
+.rotating-text p .word .letter {
+  transform-origin: center center 25px;
+}
+.rotating-text p .word .letter.out {
+  transform: rotateX(90deg);
+  transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+.rotating-text p .word .letter.in {
+  transition: 0.38s ease;
+}
+.rotating-text p .word .letter.behind {
+  transform: rotateX(-90deg);
+}
+
 /* style for second section */
 section:nth-of-type(2) .main {
     width: 60%;
@@ -26,7 +67,7 @@ section:nth-of-type(2) .main {
 }
 
 section .main .timeline {
-    flex: 1; /* Each ce-section takes up an equal share of the available space */
+    flex: 1;
     font-family: var(--body-font);
     padding: 0px 25px 15px 10px;
     box-sizing: border-box;
@@ -160,5 +201,244 @@ section .main .timeline {
 }
 
 /* style for third section */
+section#third .main .content {
+  margin: 60px 0px -20px -20px;
+  /* background-color: black; */
+}
+
+.skill-item {
+  width: calc(50% - 40px);
+  height: 100px;
+  margin: 15px;
+  display: inline-flex;
+  border-radius: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: center;
+  color: var(--text-color);
+  transition: all 0.5s ease;
+}
+
+.skill-item:nth-of-type(odd) {
+  background: linear-gradient(
+    to right,
+    var(--main-color-three) 50%,
+    var(--main-color-one) 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100%;
+  color: #fff;
+}
+
+.skill-item:nth-of-type(even) {
+  background: linear-gradient(
+    to right,
+    var(--main-color-two) 50%,
+    var(--main-color-three) 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100%;
+  color: #fff;
+}
+
+.skill-item img.skill-img {
+  width: calc(20% - 15px);
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 10px;
+}
+
+.skill-item .skill-info {
+  width: calc(70% - 7.5px);
+  display: inline-block;
+  margin-left: 14px;
+  vertical-align: top;
+  word-wrap: break-word;
+}
+
+.skill-item .skill-info span,
+.skill-item .skill-info i {
+  display: block;
+  /* text-align: center; */
+}
+
+.skill-item .skill-info i {
+  font-size: calc(var(--text-font-size) - 2px);
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.skill-box {
+  background-color: #f5f5f5;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Adjust width as needed */
+  position: relative; /* Needed for absolute positioning */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.skill-box h3 {
+  margin-bottom: 10px;
+}
+
+.skill-box i {
+  font-size: 5em;
+  margin-bottom: 10px;
+}
+
+/* .skill-box p {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  box-sizing: border-box; 
+} */
+
+.skill-box p {
+  position: absolute;
+  top: 0; /* Start at top of container */
+  left: 0;
+  right: 0;
+  bottom: 0; /* Fill entire height */
+  /* Use calc() for dynamic padding, adjust values as needed */
+  padding: calc((100% - 180px) / 2); /* Adjust 20px for total padding/border */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: left; /* Left-aligned text */
+  display: flex; /* Enable flexbox layout for centering */
+  flex-direction: column; /* Arrange content vertically */
+  align-items: center; /* Horizontally center content */
+  justify-content: center; /* Vertically center content */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+
+.skill-box:hover p {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 /* style for fourth section */
+section .main .project-wrapper {
+  font-family: var(--body-font);
+  padding: 0px 20px 15px 20px;
+  box-sizing: border-box;
+  margin-top: 80px;
+}
+
+.project {
+  /* display: inline-block;
+  position: relative;
+  float: center;
+  border-radius: 5px;
+  width: 350px;
+  height: 285px;
+  background: #131212;
+  margin: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 2px 2px 2px rgba(0,0,0,.05); */
+
+  /* width: calc(50% - 40px);
+  height: 100px;
+  margin: 15px;
+  display: inline-flex;
+  border-radius: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: center;
+  color: var(--text-color);
+  transition: all 0.5s ease; */
+
+  display: inline-block;
+  align-items: center;
+  width: calc(50% - 25px);
+  height: 280px;
+  border-radius: 5px;
+  background: var(--main-color-three); /* #131212; */
+  margin: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 2px 2px 2px rgba(0,0,0,.05);
+  transition: all 0.5s ease;
+}
+
+.project img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  /* width: 350px;
+  height: 175px; */
+  object-fit: cover;
+
+  display: inline-block;
+  align-items: center;
+  width: 100%;
+  height: 175px;
+}
+
+#project-info {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 1px;
+  color: #a8a8a8;
+}
+
+#project-info a {
+  color: #a8a8a8;
+}
+
+#project-info #link {
+  display: inline-block;
+  color: #a8a8a8;
+  margin: 5px;
+  margin-top: 17px;
+  width: 50px;
+  font-size: 8px;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 17px;
+}
+
+#project-info #link i {
+  font-size: 21px;
+}
+
+#project-name {
+  /* width: 350px; */
+  /* font-family: 'Poppins', sans-serif; */
+  background: var(--main-color-one);
+  color: var(--icons-color); /* #131212; */
+  padding: 7px 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  /* position: absolute; */
+  /* bottom: 0px; */
+  font-weight: 500;
+
+  position: relative;
+  bottom: -4px;
+  width: 100%;
+}
