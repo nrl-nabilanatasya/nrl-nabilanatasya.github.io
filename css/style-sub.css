@@ -16,44 +16,54 @@ section#first a:hover {
     background-position: 0%;
 }
 
-.rotating-text {
+.animated-text {
   flex: 1;
-    font-family: var(--body-font);
-    padding: 0px 25px 15px 25px;
-    box-sizing: border-box;
-    margin-top: 80px;
+  /* font-family: var(--body-font); */
+  padding: 0px 25px 15px 25px;
+  box-sizing: border-box;
+  margin-top: 80px;
 
   /* font-weight: 600; */
-  font-size: 30px;
+  /* font-size: 30px; */
 
   /* width: 500px; */ /* Set a fixed width */
   /* margin: 80px auto 0 auto; */ /* Maintain top margin, center horizontally */
+
+  font-size: var(--title-font-size);
+  font-family: var(--title-font);
+  letter-spacing: 2px;
 }
-.rotating-text p {
+.animated-text p {
   display: inline-flex;
   margin: 0;
   vertical-align: top;
 }
-/* .rotating-text p:nth-child(2) {
+
+/* .animated-text p:nth-child(2) {
   margin-top: 10px;
 } */
-.rotating-text p .word {
+
+.animated-text p .word {
   position: absolute;
   display: flex;
   opacity: 0;
   color: var(--main-color-one);
 }
-.rotating-text p .word .letter {
+
+.animated-text p .word .letter {
   transform-origin: center center 25px;
 }
-.rotating-text p .word .letter.out {
+
+.animated-text p .word .letter.out {
   transform: rotateX(90deg);
   transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
 }
-.rotating-text p .word .letter.in {
+
+.animated-text p .word .letter.in {
   transition: 0.38s ease;
 }
-.rotating-text p .word .letter.behind {
+
+.animated-text p .word .letter.behind {
   transform: rotateX(-90deg);
 }
 
