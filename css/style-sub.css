@@ -18,30 +18,20 @@ section#first a:hover {
 
 .animated-text {
   flex: 1;
-  /* font-family: var(--body-font); */
   padding: 0px 25px 15px 25px;
   box-sizing: border-box;
   margin-top: 80px;
-
-  /* font-weight: 600; */
-  /* font-size: 30px; */
-
-  /* width: 500px; */ /* Set a fixed width */
-  /* margin: 80px auto 0 auto; */ /* Maintain top margin, center horizontally */
-
   font-size: var(--title-font-size);
   font-family: var(--title-font);
   letter-spacing: 2px;
+  position: relative;
 }
+
 .animated-text p {
   display: inline-flex;
   margin: 0;
   vertical-align: top;
 }
-
-/* .animated-text p:nth-child(2) {
-  margin-top: 10px;
-} */
 
 .animated-text p .word {
   position: absolute;
@@ -207,7 +197,6 @@ section .main .timeline {
   font-weight: 500;
   font-size: 15px;
   color: #292929;
-  
 }
 
 /* style for third section */
