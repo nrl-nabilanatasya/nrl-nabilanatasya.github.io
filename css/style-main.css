@@ -1,7 +1,7 @@
 :root {
     --text-font-size: 14px; /* regular text font size */
     --body-font: "Roboto Mono"; /* regular text font */
-    --text-color: #191919; /* regular text color */
+    --text-color: #323232; /* #191919; */ /* regular text color */
 
     --title-font-size: 35px; /* font size for the title text */
     --title-font: "Staatliches"; /* title text font */
@@ -14,6 +14,9 @@
     --faq-slide-icon: "\eae7"; /* unicode for the faq slide icon */
     --navi-slide-icon: "\eca1"; /* unicode for the navi slide icon */
     --blogroll-slide-icon: "\ea11"; /* unicode for the blogroll slide icon */
+
+    --selection-background: #2c3e50; /* background color for the selection/tooltip */
+    --selection-text: #fff;
 
     --main-color-one: #606c88;
     --main-color-two: #bfbfbf; 
@@ -34,6 +37,16 @@ b {
 
 a {
     text-decoration: none;
+}
+
+::selection {
+    background: var(--selection-background);
+    color: var(--selection-text);
+}
+
+::-moz-selection {
+    background: var(--selection-background);
+    color: var(--selection-text);
 }
 /* end common style */
 
@@ -291,12 +304,10 @@ section:nth-of-type(even) .main::-webkit-scrollbar {
     border-radius: 3px;
 }
 
-section:nth-of-type(odd) .main::-webkit-scrollbar-thumb,
+/* section:nth-of-type(odd) .main::-webkit-scrollbar-thumb,
 section#etiketten
   .main
-  .content
-  article.labels:nth-of-type(odd)
-  .labels_binnenste::-webkit-scrollbar-thumb {
+  .content {
   border: 2px solid #fff;
   border-radius: 10px;
   background: var(--main-color-two);
@@ -305,13 +316,11 @@ section#etiketten
 section:nth-of-type(even) .main::-webkit-scrollbar-thumb,
 section#etiketten
   .main
-  .content
-  article.labels:nth-of-type(even)
-  .labels_binnenste::-webkit-scrollbar-thumb {
+  .content {
   border: 2px solid #fff;
   border-radius: 10px;
   background: var(--main-color-one);
-}
+} */
 
 section .main h2 {
     font-size: var(--title-font-size);
