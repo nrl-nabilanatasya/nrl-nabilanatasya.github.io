@@ -1,9 +1,5 @@
-// import { useState } from "react";
-
 function WindowButton({ title, image, className, active, handleClick}) {
     const activeClass = active ? ' act' : ''; // Add 'act' className if active is true
-
-    // console.log(active)
     
     return (
         <button className={`btn ${className}${activeClass}`} onClick={handleClick}>
@@ -44,21 +40,15 @@ export const MobileButtonData = [
 ]
 
 export default function Taskbar_Left({ searchVisible, setSearchVisible, imageVisible, setImageVisible, updateVisible, setUpdateVisible }) {
-    // const [searchVisible, setSearchVisibleLocal] = useState(true);
-    // const [imageVisible, setImageVisibleLocal] = useState(true);
-
     const toggleSearch = () => {
-        // setSearchVisibleLocal(!searchVisible);
         setSearchVisible(!searchVisible);
     };
 
     const toggleImage = () => {
-        // setImageVisibleLocal(!imageVisible);
         setImageVisible(!imageVisible);
     };
 
     const toggleUpdate = () => {
-        // setImageVisibleLocal(!imageVisible);
         setUpdateVisible(!updateVisible);
     };
 
@@ -75,9 +65,7 @@ export default function Taskbar_Left({ searchVisible, setSearchVisible, imageVis
             {/* LATER ADD BUTTON FOR MOBILE HERE */}
             {MobileButtonData.map((button) => (
                 <MobileButton key={button.title}
-                // active={(button.className === 'sea' && searchVisible) || (button.className === 'imej' && imageVisible) || (button.className === 'up' && updateVisible)}
                 {...button}
-                // handleClick={button.className === 'sea' ? toggleSearch : button.className === 'imej' ? toggleImage : button.className === 'up' ? toggleUpdate : null}
                 />
             ))}
         </div>
