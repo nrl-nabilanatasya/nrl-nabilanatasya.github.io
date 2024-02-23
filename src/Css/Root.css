@@ -1,0 +1,77 @@
+:root {
+    --body-font:Tahoma,Tahoma,sans-serif;
+    --body-size:12px;
+    --body-wgt:400;
+    --line-hgt:1.5em;
+
+    --side-size:16vw;
+    --post-size:35vw;
+
+    --post-gap:30px;
+    
+    --skill1:40%;
+    --skill2:100%;
+    --skill3:60%;
+    --skill4:20%;
+    --skill5:80%;
+
+    /* COLORS */
+    --links:#f46e8a;
+    --links-hover:#9dc6d7;
+}
+
+body.light, [data-theme="daynight"] body.dark {
+    --bg-img:url('https://64.media.tumblr.com/e06fbf6502efd91055608b23dc8461c2/97f209bfb9e8bd92-cb/s2048x3072/30ae44bbbf5707dc0320afa0d5ba38e2568c2ae6.webp');
+    --bg-size:cover;
+    --bg-repeat:repeat;
+    --bg-attach:fixed;
+    --bg-position:center;
+    --accent1:#feada6;
+    --rgb-accent1:254,173,166;
+    --accent2:#f5efef;
+    --rgb-accent2:245,239,239;
+    --accent-text:#ffffff;
+    --rgb-accent-text:255,255,255;
+    --bg:#f5efef;
+    --rgb-bg:245,239,239;
+    --bg2:#feada6;
+    --rgb-bg2:254,173,166;
+    --sideborders:#d0d0d0;
+    --borders:#d0d0d0;
+    --borders1:#ffffff;
+    --borders2:#999999;
+    --captions:#ffffff;
+    --posts:#f0f0f0;
+    --rgb-posts:240,240,240;
+    --text:#000000;
+    --rgb-text:0,0,0;
+    --NPF-Audio-Buttons-Color:#000000;
+}
+
+body.dark, [data-theme="daynight"] body.light {
+    --bg-img:url('https://64.media.tumblr.com/37f8744d7c86700bc0ce6ee1b76b500f/97f209bfb9e8bd92-c3/s2048x3072/44616e10ac8b39e8687adec1e9f531081284e3cc.jpg');
+    --bg-size:cover;
+    --bg-repeat:repeat;
+    --bg-attach:fixed;
+    --bg-position:center;
+    --accent1: #d35656; /* #3d315b #742761 */
+    --rgb-accent1:116,39,97;
+    --accent2: #6b5b95; /* #8f2d56 #ea6060 */
+    --rgb-accent2:234,96,96;
+    --accent-text:#ffffff;
+    --rgb-accent-text:255,255,255;
+    --bg:#2d2d2d; /* #ea6060 */
+    --rgb-bg:234,96,96;
+    --bg2:#742761;
+    --rgb-bg2:116,39,97;
+    --sideborders:#5d5d5d;
+    --borders:#151515;
+    --borders1:#444444;
+    --borders2:#101010; 
+    --captions:#1d1d1d;
+    --posts:#2d2d2d;
+
+    --text:#ffffff;
+    --rgb-text:255,255,255;
+}
+

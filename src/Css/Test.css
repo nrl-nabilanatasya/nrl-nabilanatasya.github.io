@@ -1,0 +1,35 @@
+.content1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-gap: 5px; /* Adjust gap between items as needed */
+}
+
+.content1 span {
+    padding: 4px 0;
+}
+
+.content1 .radio {
+    width: 100%;
+    /* margin: 0 1px 0 0;  */
+    padding: 4px 10px;
+    background: var(--posts);
+    color: var(--text);
+    border: 1px solid var(--borders);
+    box-shadow: inset 1px 1px 0 var(--borders1), inset 0 0 1px 1px var(--borders);
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+
+.content1 .radio .act {
+    border-top: 1px solid var(--borders2);
+    border-left: 1px solid var(--borders2);
+    border-bottom: 1px solid var(--borders1);
+    border-right: 1px solid var(--borders1);
+}
+
+body.dark .radio.act { /* later check again at line 2509 */
+    background: rgba(254, 125, 125, 0.929); 
+}
+

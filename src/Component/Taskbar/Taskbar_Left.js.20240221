@@ -1,0 +1,54 @@
+import { useState } from "react";
+
+import Window_Header from "../Main Window/Window_Header";
+
+function LeftButton({ title, image, className, active, handleClick}) {
+    const activeClass = active ? ' act' : ''; // Add 'act' class if active is true
+    
+    return (
+        <button className={`btn ${className}${activeClass}`} onClick={handleClick}>
+            <div className="linfo flex center">
+                <div className="ltitle">
+                    <img src={image} draggable={false} alt={title} />
+                    {title}
+                </div>
+            </div>
+        </button>
+    );
+}
+
+export const LeftButtonData = [
+    { title: 'Start', image: 'images/icon/computer-icon.png', className: 'start' },
+    { title: 'Nuwa', image: 'images/cat.png', className: 'posts' },
+    { title: 'Search', image: 'images/icon/search-icon.png', className: 'sea' },
+    { title: 'Image', image: 'images/icon/search-icon.png', className: 'imej' },
+    ];
+
+export default function Taskbar_Left({ setSearchVisible, setImageVisible }) {
+    const [searchVisible, setSearchVisibleLocal] = useState(true);
+    const [imageVisible, setImageVisibleLocal] = useState(true);
+
+    const toggleSearch = () => {
+        setSearchVisibleLocal(!searchVisible);
+        setSearchVisible(!searchVisible);
+    };
+
+    const toggleImage = () => {
+        setImageVisibleLocal(!imageVisible);
+        setImageVisible(!imageVisible);
+    };
+
+    return (
+        <div className="tasks flex">
+            {LeftButtonData.map((button) => (
+                <LeftButton key={button.title}
+                active={(button.className === 'sea' && searchVisible) || (button.className === 'imej' && imageVisible)}
+                {...button}
+                handleClick={button.className === 'sea' ? toggleSearch : button.className === 'imej' ? toggleImage : null}
+                />
+            ))}
+
+            {/* LATER ADD BUTTON FOR MOBILE HERE */}
+        </div>
+    );
+}

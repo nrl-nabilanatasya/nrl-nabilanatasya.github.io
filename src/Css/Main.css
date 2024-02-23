@@ -1,0 +1,939 @@
+/* Reset and General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    background-color: var(--bg);
+    font-family: var(--body-font);
+    font-size: var(--body-size);
+    font-weight: var(--body-wgt);
+    line-height: var(--line-hgt);
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--links);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--links-hover);
+}
+
+h1,
+.t-title {
+    font-size: calc(var(--body-size) + 15px);
+    line-height: var(--line-hgt)
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 10px 0
+}
+
+p {
+    margin: 10px 0
+}
+
+ol,ul {
+    margin: 0 0 0 3em
+}
+
+ul {
+    list-style-type: square
+}
+
+ol li,ul li {
+    margin: 5px 0;
+}
+
+.visible {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+.hidden {
+    display: none !important;
+    transition: opacity 0.5s ease-in-out !important;
+}
+
+/* Background */
+body.imgbg {
+    /* background: var(--captions); */
+    background-image: var(--bg-img);
+    background-size: var(--bg-size);
+    background-repeat: var(--bg-repeat);
+    background-attachment: var(--bg-attach);
+    background-position: var(--bg-position);
+}
+
+.dn {
+    margin: 0;
+    cursor: pointer; /* nurul add 20240216 */
+}
+
+body.night .diemnox {
+    display: block;
+}
+
+input[type=checkbox],body.night .moon {
+    display: none;
+}
+
+input[type=checkbox]:checked+.dn {
+    vertical-align: middle;
+}
+
+body.light .nox,
+body.dark .diem {
+    display: none
+}
+
+/* Layout */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify {
+    justify-content: space-between;
+}
+
+.center {
+    align-content: center;
+}
+
+.min {
+    margin-left: 0;
+}
+
+.none {
+    display: none;
+}
+
+.padding {
+    padding: 10px;
+    border-top: 1px solid var(--borders2);
+    box-shadow: inset 0 1px 0 var(--borders1);
+}
+
+.container {
+    margin: 0;
+    width: 100%;
+}
+
+article {
+    margin: 0 0 var(--post-gap);
+    width: 100%;
+    background: var(--posts);
+    border: 1px solid var(--borders1);
+    outline: 1px solid var(--borders2);
+    overflow: hidden;
+    box-shadow: 3px 3px 0 rgba(50,50,50,.1)
+}
+
+.half,.small,.med,.large {
+    margin: 0
+}
+
+.half {
+    width: calc(50% - (var(--post-gap) / 4))
+}
+
+/* Components */
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0 15px;
+    width: 100vw;
+    height: 50px;
+    background: var(--posts);
+    border-top: 1px solid var(--borders);
+    box-shadow: inset 0 1px 0 var(--borders1);
+    z-index: 9999999;
+}
+
+.tasks {
+    margin: auto 0;
+    width: 60%;
+}
+
+.tasks2 {
+    display: inline-flex;
+    margin: auto 0;
+    max-width: 40%;
+}
+
+.btn,
+[class^="btn_"] {
+    display: inline-flex;
+    margin: 0 1px 0 0;
+    padding: 4px 10px;
+    max-width: calc(20% - 1px);
+    background: var(--posts);
+    color: var(--text);
+    border: 1px solid var(--borders);
+    box-shadow: inset 1px 1px 0 var(--borders1), inset 0 0 1px 1px var(--borders);
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Interactions */
+.btn:hover,
+[class^="btn_"]:hover,
+.tasks2 a:hover {
+    color: var(--text);
+}
+
+.btn:hover { /* later check again at line 2427 */
+    outline: .75px dashed var(--text);
+    outline-offset: -5px;
+    cursor: pointer;
+}
+
+.btn.act,
+[class^="btn_"].act {
+    border-top: 1px solid var(--borders2);
+    border-left: 1px solid var(--borders2);
+    border-bottom: 1px solid var(--borders1);
+    border-right: 1px solid var(--borders1);
+}
+
+/* Typography */
+.linfo {
+    margin: 0;
+    width: 100%;
+}
+
+.ltitle {
+    width: 100%;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn .ti,
+[class^="btn_"] .ti,
+.clock-wrap .ti {
+    margin: auto 5px auto 0;
+    font-size: var(--body-size);
+    color: var(--text);
+}
+
+.clock-wrap {
+    margin: auto 0 auto 1px;
+    padding: 4px 10px;
+    border-top: 1px solid var(--borders2);
+    border-left: 1px solid var(--borders2);
+    border-right: 1px solid var(--borders1);
+    border-bottom: 1px solid var(--borders1);
+    box-shadow: inset 0 1px 0 var(--borders1);
+}
+
+#clock {
+    display: inline-flex;
+}
+
+.btn img,[class^="btn_"] img,.clock-wrap img {
+    margin: auto 5px auto 0;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+}
+
+body.dark [class^="btn_"].act, body.dark .btn.act, body.dark .tasks2 a:active { /* later check again at line 2509 */
+    background: rgba(255,255,255,.12); 
+}
+
+/* ---------- IMAGE WINDOW ---------- */
+.image-wrap {
+    left: 20px;
+    bottom: 80px;
+    width: 20vw
+}
+
+/* ---------- SEARCH WINDOW ---------- */
+.start-wrap, .up-wrap, .search-wrap, .image-wrap {
+    position: fixed;
+    z-index: 9999;
+    cursor: move;
+}
+
+.up-wrap, .search-wrap {
+    right: 20px;
+    width: 20vw;
+}
+
+.up-wrap {
+    bottom: 400px;
+}
+
+.search-wrap {
+    bottom: 80px;
+}
+
+.start-wrap article, .up-wrap article, .search-wrap article, .image-wrap article {
+    margin: 0;
+}
+
+.start-wrap .inner-padding, .up-wrap .up, .search-wrap .inner-padding, .image-wrap .inner-padding {
+    cursor: auto;
+}
+
+.searchbar {
+    margin: 0;
+    width: 100%;
+    background: transparent;
+    color: var(--text);
+    font-size: var(--body-size);
+    font-family: var(--body-font);
+    outline: 0!important;
+    border-width: 0!important;
+}
+
+/* ---------- MAIN WINDOW ---------- */
+.package {
+    margin: calc(6vh - (40px /2)) auto;
+    padding: 0;
+    width: calc(var(--side-size) + var(--post-size) + 134px);
+    background: var(--posts);
+    border: 1px solid var(--borders1);
+    outline: 1px solid var(--borders2);
+    box-shadow: 3px 3px 0 rgba(50,50,50,.1);
+    overflow: hidden;
+    /* z-index: 1; */
+}
+
+.packhead {
+    width: 100%;
+}
+
+.post-header {
+    margin: 0;
+    padding: 10px;
+    background: var(--accent-text);
+    background-image: linear-gradient(to right,var(--accent1),var(--accent2));
+    color: var(--text);
+    width: 100%;
+    cursor: move; /* nurul add 20240216*/
+}
+
+.winhead {
+    width: calc(100% - 80px);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.winhead img {
+    margin: auto 0;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+}
+
+.w-info {
+    margin: 0;
+    width: calc(100% - 30px);
+}
+
+.w-title {
+    vertical-align: middle;
+    margin: auto 0;
+    width: 100%;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+}
+
+.winhead .ti { /* icons */
+    margin: auto 0;
+    vertical-align: middle;
+    padding: 3px;
+    font-size: 14px;
+    background: var(--posts);
+    color: var(--text);
+    border: 1px solid var(--borders);
+    box-shadow: inset 1px 1px 0 var(--borders1);
+}
+
+.post-btns {
+    margin: 0;
+}
+
+.post-btns .ti {
+    margin: auto 0;
+    vertical-align: middle;
+    padding: 3px;
+    font-size: 14px;
+    background: var(--posts);
+    color: var(--text);
+    border: 1px solid var(--borders);
+    box-shadow: inset 1px 1px 0 var(--borders1);
+}
+
+.post-btns .ti.win {
+    margin: auto -4px;
+}
+
+.post-btns .ti.ex:hover,.post-btns .ti.close:hover {
+    cursor: pointer;
+}
+
+.post-btns .ti.ex:active,.post-btns .ti.close:active {
+    border-top: 1px solid var(--borders2);
+    border-left: 1px solid var(--borders2);
+    border-bottom: 1px solid var(--borders1);
+    border-right: 1px solid var(--borders1);
+}
+
+.address-bar {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    background: var(--posts);
+    border-top: 1px solid var(--borders2);
+    border-bottom: 1px solid var(--borders2);
+    box-shadow: 0 1px 0 var(--borders1),inset 0 1px 0 var(--borders1)
+}
+
+.address-bar .ti {
+    display: inline-flex;
+    margin: auto 0;
+    vertical-align: middle;
+    padding: 6px;
+    background: var(--posts);
+    color: var(--text);
+    border: 1px solid var(--borders);
+    box-shadow: inset 1px 1px 0 var(--borders1);
+    font-size: calc(var(--body-size) + 2px)
+}
+
+.address-bar a,
+.address-bar label,
+.to-top,
+.m-to-top {
+    margin: auto 0
+}
+
+.address {
+    margin: auto 0;
+    padding: 4px 10px;
+    width: calc(100% - 140px);
+    background: var(--captions);
+    border-top: 1px solid var(--borders2);
+    border-left: 1px solid var(--borders2);
+    border-right: 1px solid var(--borders);
+    border-bottom: 1px solid var(--borders);
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: var(--line-hgt)
+}
+
+.a-info {
+    margin: 0;
+    width: 100%
+}
+
+.a-name {
+    vertical-align: middle;
+    margin: auto 0;
+    width: 100%;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.urlol {
+    color: rgba(var(--rgb-text),.5)
+}
+
+.home-wrap {
+    display: inline-block;
+}
+
+.page-1 {
+    display: none;
+}
+
+.to-top .ti,.m-to-top .ti {
+    color: rgba(var(--rgb-text),.5)!important;
+}
+
+.to-top .ti:hover,.m-to-top .ti {
+    color: rgba(var(--rgb-text),.5)!important;
+    cursor: default;
+}
+
+.scroll,.m-scroll {
+    display: none;
+    position: absolute;
+    margin: 0;
+}
+
+.scroll .ti,.m-scroll .ti {
+    margin: 0;
+    color: var(--text)!important;
+    z-index: 9999;
+    animation: fadein 0.4s ease-in-out forwards;
+}
+
+.scroll .ti:hover,.m-scroll .ti:hover {
+    color: var(--text)!important;
+    cursor: pointer!important;
+}
+
+.tbtn .close.act .ti {
+    border-top: 1px solid var(--borders2);
+    border-left: 1px solid var(--borders2);
+    border-bottom: 1px solid var(--borders1);
+    border-right: 1px solid var(--borders1);
+}
+
+/* ---------- SIDEBAR ---------- */
+.sidebar {
+    position: sticky;
+    position: -webkit-sticky;
+    margin: 0;
+    padding: 10px;
+    width: var(--side-size)
+}
+
+.sidebox {
+    margin: auto 0;
+    width: 100%;
+    height: calc(75vh - 40px);
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.inner-padding, 
+.sidebox { /* later check again at line 178 */
+    padding: 10px;
+    background: var(--captions);
+    border: 1px solid;
+    border-color: var(--borders2) var(--borders) var(--borders) var(--borders2);
+}
+
+.sidebox::-webkit-scrollbar,.desc::-webkit-scrollbar,.up::-webkit-scrollbar {
+    width: 14px;
+}
+
+.sidebox::-webkit-scrollbar-thumb,.desc::-webkit-scrollbar-thumb,.up::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+}
+
+.folders {
+    margin: 0;
+}
+
+.folders img {
+    margin: auto 7px auto 2px;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    z-index: 99;
+}
+
+.inner-folder {
+    padding-left: 13px;
+    width: 100%;
+    border-left: 1px dotted var(--sideborders);
+}
+
+.inner-folder a,.inner-folder label {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fold {
+    position: relative;
+    margin-bottom: 5px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.fold:last-of-type {
+    margin-bottom: 0;
+}
+
+.folds a:last-of-type {
+    margin-top: 1px;
+    border-width: 0
+}
+
+.folds a:last-of-type:before {
+    content: "";
+    position: absolute;
+    top: calc((var(--line-hgt) / 2) + 2px);
+    left: 0;
+    width: 5px;
+    height: 1px;
+    border-bottom: 1px dotted var(--sideborders)
+}
+
+.folds a:last-of-type:after {
+    content: "";
+    position: absolute;
+    bottom: calc((var(--line-hgt) / 2) + 7px);
+    left: 0;
+    width: 10px;
+    height: calc(100% - 10px);
+    border-left: 1px dotted var(--sideborders)
+}
+
+.fold-info {
+    margin: 0;
+    width: calc(100% - 25px);
+}
+
+.fold-name {
+    vertical-align: middle;
+    margin: auto 0;
+    width: 100%;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fold-name:hover {
+    color: var(--links-hover);
+}
+
+.folds {
+    margin-left: 8px;
+}
+
+.folds a,.folds label,.folds span {
+    margin-top: 1px;
+    display: block;
+    position: relative;
+    padding: 5px;
+    color: var(--text);
+    border-left: 1px dotted var(--sideborders);
+}
+
+.folds a:before,.folds label:before,.folds span:before {
+    content: "";
+    position: absolute;
+    top: calc((var(--line-hgt) / 2) + 2px);
+    left: 0;
+    width: 5px;
+    height: 1px;
+    border-bottom: 1px dotted var(--sideborders);
+}
+
+.folds a:hover,.folds label:hover,.inner-folder a:hover {
+    color: var(--links-hover);
+    cursor: pointer;
+}
+
+#button_a:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_a,
+#button_b:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_b,
+#button_c:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_c,
+#button_d:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_d,
+#button_e:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_e,
+#button_f:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_f,
+#button_a:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_a:hover,
+#button_b:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_b:hover,
+#button_c:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_c:hover,
+#button_d:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_d:hover,
+#button_e:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_e:hover,
+#button_f:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_f:hover {
+    cursor: default;
+    background: var(--accent1);
+    color: var(--accent-text);
+}
+
+/* ---------- CONTENT ---------- */
+.wrapper {
+    margin: 0;
+    padding: 10px 10px 10px 0;
+    width: calc(var(--post-size) + 130px);
+    max-width: 85vw;
+}
+
+.tabs {
+    margin: 0 auto;
+    padding: 40px;
+    width: 100%;
+    background: var(--captions);
+    height: calc(75vh - 40px);
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-top: 1px solid var(--borders2);
+    border-left: 1px solid var(--borders2);
+    border-right: 1px solid var(--borders);
+    border-bottom: 1px solid var(--borders);
+}
+
+[class^="tab_"] {
+    display: none;
+    position: relative;
+    margin: 0 auto;
+    width: var(--post-size);
+    animation: fadein 0.4s ease-in-out forwards;
+}
+
+.tabs::-webkit-scrollbar,.sidebox::-webkit-scrollbar,.desc::-webkit-scrollbar,.up::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+.tabs::-webkit-scrollbar {
+    width: 20px;
+}
+
+.tabs::-webkit-scrollbar-thumb,.sidebox::-webkit-scrollbar-thumb,.desc::-webkit-scrollbar-thumb,.up::-webkit-scrollbar-thumb {
+    background: var(--accent1);
+    background: linear-gradient(var(--accent1),var(--accent2));
+    height: 90px;
+    border: 6px solid transparent;
+    background-clip: padding-box;
+}
+
+.tabs::-webkit-scrollbar-thumb {
+    border: 6px solid transparent;
+}
+
+/* ---------- ABOUT ---------- */
+.about {
+    margin: 0;
+    width: 100%
+}
+
+#button_a:checked~.package>.wrapper>.tabs>.tab_a,
+#button_b:checked~.package>.wrapper>.tabs>.tab_b,
+#button_c:checked~.package>.wrapper>.tabs>.tab_c,
+#button_d:checked~.package>.wrapper>.tabs>.tab_d,
+#button_e:checked~.package>.wrapper>.tabs>.tab_e,
+#button_f:checked~.package>.wrapper>.tabs>.tab_f {
+    display: block;
+}
+
+#button_a:checked~.taskbar>.tasks>.btn_a:hover,
+#button_b:checked~.taskbar>.tasks>.btn_b:hover,
+#button_c:checked~.taskbar>.tasks>.btn_c:hover,
+#button_d:checked~.taskbar>.tasks>.btn_d:hover,
+#button_e:checked~.taskbar>.tasks>.btn_e:hover,
+#button_f:checked~.taskbar>.tasks>.btn_f:hover {
+    outline: 0 solid transparent;
+}
+
+/* ---------- SKILL ---------- */
+.skills table {
+    width: 100%;
+}
+
+.skills td {
+    width: 80%;
+}
+
+.skills td:first-of-type {
+    width: 20%;
+    text-align: center;
+}
+
+.skills h4 {
+    margin: 7px 0;
+    vertical-align: middle;
+}
+
+.hp {
+    width: 100%;
+    height: 10px;
+    background: var(--posts);
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-top: 1px solid var(--borders2);
+    border-left: 1px solid var(--borders2);
+    border-right: 1px solid var(--borders1);
+    border-bottom: 1px solid var(--borders1);
+}
+
+.hpbar {
+    margin: auto 0;
+    vertical-align: middle;
+    background-color: var(--accent1);
+    background-image: linear-gradient(to right,var(--accent1),var(--accent2));
+    height: 10px;
+    background-clip: padding-box;
+    color: var(--accent-text);
+}
+
+.hpbar.one {
+    width: var(--skill1);
+}
+
+.hpbar.two {
+    width: var(--skill2);
+}
+
+.hpbar.three {
+    width: var(--skill3);
+}
+
+.hpbar.four {
+    width: var(--skill4);
+}
+
+.hpbar.five {
+    width: var(--skill5);
+}
+
+/* ---------- PORTFOLIO ---------- */
+.explore {
+    width: 100%;
+}
+
+.inner-padding img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.post-footer {
+    padding: 0 10px 10px;
+    color: var(--text);
+    width: 100%;
+    overflow: hidden;
+}
+
+.post-footer a {
+    color: var(--text);
+}
+
+.post-footer a:hover {
+    color: var(--links-hover);
+}
+
+.post-foot {
+    margin: 0;
+    width: 100%;
+}
+
+[class^="post-info"],
+.controls {
+    margin: 0;
+}
+
+[class^="post-info"],
+.time-info {
+    border-top: 1px solid var(--borders2);
+    border-left: 1px solid var(--borders2);
+    border-right: 1px solid var(--borders1);
+    border-bottom: 1px solid var(--borders1);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+[class^="post-info"] {
+    width: calc(33% - 1.5px);
+}
+
+.pinfo {
+    margin: 0;
+    width: 100%;
+}
+
+.pnotes {
+    vertical-align: middle;
+    margin: auto 0;
+    padding: 5px 10px;
+    width: 100%;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center; /* nurul add 20240216 */
+}
+
+/* ---------- FOLDER 1 ---------- */
+.error,
+.no-posts {
+    margin: 0 auto;
+    width: var(--post-size);
+}
+
+.go-back {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.yes, .no {
+    width: calc(50% - 1px);
+    color: var(--text);
+    justify-content: center;
+    text-align: center;
+    background: var(--posts);
+    border: 1px solid var(--borders);
+    box-shadow: inset 1px 1px 0 var(--borders1);
+    overflow: hidden;
+}
+
+.go-back a {
+    padding: 5px 10px;
+    justify-content: center;
+}
+
+.yes:hover,.no:hover {
+    color: var(--text);
+}
+
+.no:hover {
+    cursor: default;
+}
+
+a:active.yes {
+    box-shadow: inset 1px 1px 0 0 var(--borders2),inset 0 0 1px 1px var(--borders1);
+}
+
+.yes:hover { /* later check again at line 2472 */
+    outline: .75px dashed var(--text);
+    outline-offset: -5px;
+    cursor: pointer;
+}
+
+/* ---------- /// ---------- */
+.mobile-head,.m-to-top,.m-bar,[class^="btn_"],.arc,.m-cred,.bg-up,.bg-sea,.post-btns .ti.close,.dc {
+    display: none;
+}
+
+.tags a:hover,
+.ptags a:hover,
+.address-bar .ti:hover,
+.pref a:hover,
+.explr a:hover,
+.post-btns .ti.ex:hover,
+.post-btns .ti.close:hover {
+    outline: .75px dashed var(--text);
+    outline-offset: -4px;
+    cursor: pointer;
+}
+
+.to-top .ti:hover {
+    outline: 0 dashed var(--text);
+    outline-offset: 0;
+    cursor: default;
+}
+
+.scroll .ti:hover {
+    outline: .75px dashed var(--text);
+    outline-offset: -4px;
+    cursor: pointer
+}

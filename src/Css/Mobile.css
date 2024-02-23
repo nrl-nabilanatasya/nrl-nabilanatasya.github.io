@@ -1,0 +1,160 @@
+.mobile-head,
+.m-to-top,
+.m-bar,
+[class^="btn_"],
+.arc,
+.bg-up,
+.bg-sea,
+.post-btns .ti.close,
+.dc {
+    display: none;
+}
+
+.cover {
+    width: 100%;
+    max-height: 18vh;
+    background: radial-gradient(ellipse at top,var(--accent1),transparent),radial-gradient(ellipse at bottom,var(--accent2),transparent);
+    overflow: hidden;
+    border-top: 1px solid var(--borders2);
+    box-shadow: inset 0 1px 0 var(--borders1);
+}
+
+.cover img {
+    width: 100%;
+    max-height: 18vh;
+    object-fit: fill;
+}
+
+.por {
+    margin: -40px auto 10px
+}
+
+.por img {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    padding: 3px;
+    background: var(--posts);
+    border: 1px solid var(--borders2);
+    box-shadow: inset 1px 1px 0 var(--borders1)
+}
+
+.por.circle img {
+    border-radius: 100%
+}
+
+.por.square img {
+    border-radius: 0
+}
+
+@media only screen and (max-width: 850px) {
+    [class^="btn_"].ei {
+        max-width: calc((100% / 8.1) - 1px)
+    }
+
+    [class^="btn_"].se {
+        max-width: calc((100% / 7.1) - 1px)
+    }
+
+    [class^="btn_"].si {
+        max-width: calc((100% / 6.1) - 1px)
+    }
+
+    [class^="btn_"].fi {
+        max-width: calc((100% / 5.1) - 1px)
+    }
+
+    [class^="btn_"].fo {
+        max-width: calc((100% / 4.1) - 1px)
+    }
+
+    [class^="btn_"].th {
+        max-width: calc((100% / 3.1) - 1px)
+    }
+
+    .mobile-head {
+        display: block;
+    }
+
+    .mobile-head {
+        position: relative;
+        margin: 0;
+        width: 100%;
+    }
+
+    .cover {
+        width: 100%;
+        max-height: 25vh;
+        overflow: hidden;
+        border-top: 1px solid var(--borders2);
+        box-shadow: inset 0 1px 0 var(--borders1);
+    }
+
+    .cover img {
+        width: 100%;
+        max-height: 25vh;
+        object-fit: fill;
+    }
+
+    .tasks {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tasks2, .start, .posts, .sea, .update, .thm,.start-wrap, .sidebar, .to-top, .post-btns .ti.ex, .tc {
+        /* later check again at line 3 */
+        /* this hide the date, clock and buttons for big screen */
+        display:none!important;
+    }
+
+    .package, .wrapper, .error_wrapper, .search_error {
+        width: 100vw;
+        max-width: 100vw;
+    }
+
+    .package {
+        margin: 0 auto;
+        border-width: 0;
+        outline: 0 solid var(--borders2);
+        box-shadow: 0 0 0 rgba(50,50,50,.1);
+    }
+
+    .wrapper {
+        padding: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .packhead {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+    }
+
+    .tabs {
+        margin: 0 auto;
+        width: 100vw;
+        padding: 50px 15px 70px;
+        height: auto;
+        border-width: 0;
+        border-top: 1px solid var(--borders2);
+        box-shadow: inset 0 1px 0 var(--borders1);
+    }
+
+    [class^="tab_"],.entry,.bb,.bbb,.error,.no-posts {
+        width: 100%;
+    }
+
+    body.imgbg .tabs,body.imgbg .error_wrapper,body.imgbg .search_error {
+        background-image: var(--bg-img);
+        background-size: var(--bg-size);
+        background-repeat: var(--bg-repeat);
+        background-attachment: var(--bg-attach);
+        background-position: var(--bg-position);
+    }
+
+    .m-to-top,[class^="btn_"],.dc {
+        display: inline-flex;
+    }
+}
