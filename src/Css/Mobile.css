@@ -101,10 +101,10 @@
         justify-content: center;
     }
 
-    .tasks2, .start, .posts, .sea, .update, .thm,.start-wrap, .sidebar, .to-top, .post-btns .ti.ex, .tc {
+    .tasks2, .start, .posts, .sea, .imej, .up, .update, .thm,.start-wrap, .sidebar, .to-top, .post-btns .ti.ex, .tc {
         /* later check again at line 3 */
         /* this hide the date, clock and buttons for big screen */
-        display:none!important;
+        display: none !important;
     }
 
     .package, .wrapper, .error_wrapper, .search_error {

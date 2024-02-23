@@ -26,9 +26,9 @@ body.light, [data-theme="daynight"] body.dark {
     --bg-repeat:repeat;
     --bg-attach:fixed;
     --bg-position:center;
-    --accent1:#feada6;
+    --accent1:#B9C7F3; /* #feada6 */
     --rgb-accent1:254,173,166;
-    --accent2:#f5efef;
+    --accent2:#f5efef; /* #f5efef */
     --rgb-accent2:245,239,239;
     --accent-text:#ffffff;
     --rgb-accent-text:255,255,255;

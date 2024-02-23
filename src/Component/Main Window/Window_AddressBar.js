@@ -58,7 +58,13 @@ export default function Window_AddressBar() {
                 <i className="ti ti-arrow-up"></i>
             </div>
 
-            {/* LATER ADD BACK TO TOP BUTTON FOR MOBILE */}
+            {/* BACK TO TOP BUTTON FOR MOBILE */}
+            <div className="m-to-top">
+                <a className="m-scroll" title="Back to top">
+                    <i className="ti ti-arrow-up"></i>
+                </a>
+                <i className="ti ti-arrow-up"></i>
+            </div>
 
             {/* THREE DOT */}
             <div className="tc">
@@ -68,7 +74,10 @@ export default function Window_AddressBar() {
                 </a>
             </div>
 
-            {/* LATER ADD THREE DOT FOR MOBILE */}
+            {/* THREE DOT FOR MOBILE */}
+            <div className="dc">
+                <i className="ti ti-dots-vertical"></i>
+            </div>
         </div>
     );
 }

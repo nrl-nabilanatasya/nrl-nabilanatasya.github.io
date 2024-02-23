@@ -54,12 +54,30 @@ ol li,ul li {
 
 .visible {
     display: block !important;
-    opacity: 1 !important;
+    opacity: 0; /* Start with opacity 0 */
+    animation: fadeIn 0.5s ease forwards; /* Use the fadeIn animation with a duration of 0.5s */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 */
+    }
 }
 
 .hidden {
-    display: none !important;
-    transition: opacity 0.5s ease-in-out !important;
+    opacity: 1; /* Start with opacity 1 */
+    animation: fadeOut 0.5s ease forwards; /* Use the fadeOut animation with a duration of 0.5s */
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1; /* Start with opacity 1 */
+    }
+    to {
+        opacity: 0; /* End with opacity 0 */
+        display: none; /* Apply display: none; after the animation completes */
+    }
 }
 
 /* Background */
@@ -466,7 +484,7 @@ body.dark [class^="btn_"].act, body.dark .btn.act, body.dark .tasks2 a:active { 
     display: none;
 }
 
-.to-top .ti,.m-to-top .ti {
+.to-top .ti, .m-to-top .ti {
     color: rgba(var(--rgb-text),.5)!important;
 }
 
@@ -475,13 +493,13 @@ body.dark [class^="btn_"].act, body.dark .btn.act, body.dark .tasks2 a:active { 
     cursor: default;
 }
 
-.scroll,.m-scroll {
+.scroll, .m-scroll {
     display: none;
     position: absolute;
     margin: 0;
 }
 
-.scroll .ti,.m-scroll .ti {
+.scroll .ti, .m-scroll .ti {
     margin: 0;
     color: var(--text)!important;
     z-index: 9999;
