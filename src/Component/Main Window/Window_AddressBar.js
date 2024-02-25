@@ -3,12 +3,12 @@ import { useEffect } from "react";
 export default function Window_AddressBar() {
     useEffect(() => {
         const checkbox = document.querySelector('.modus');
-        const mode = localStorage.getItem("theme") || "normal";
-        const isNightMode = mode === "daynight";
+        const mode = localStorage.getItem("theme");
+        const isLightMode = mode === "daynight";
 
-        checkbox.checked = isNightMode;
-        document.documentElement.setAttribute("data-theme", isNightMode ? "daynight" : "normal");
-        document.body.classList.toggle("night", isNightMode);
+        checkbox.checked = isLightMode;
+        document.documentElement.setAttribute("data-theme", isLightMode ? "daynight" : "normal");
+        document.body.classList.toggle("night", isLightMode);
 
         const switchTheme = (event) => {
             const isNight = event.target.checked;

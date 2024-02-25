@@ -389,7 +389,7 @@ body.dark [class^="btn_"].act, body.dark .btn.act, body.dark .tasks2 a:active { 
 }
 
 .post-btns .ti {
-    margin: auto 0;
+    margin: auto 3px;
     vertical-align: middle;
     padding: 3px;
     font-size: 14px;

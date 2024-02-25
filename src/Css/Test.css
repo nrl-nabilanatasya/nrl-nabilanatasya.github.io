@@ -54,3 +54,77 @@ body.dark .radio.act { /* later check again at line 2509 */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
     z-index: 9998; /* Ensure the overlay is behind the popup */
 }
+
+.tabs .post-header{
+    cursor: default;
+}
+/* ****************************************************** */
+
+.follows {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.person {
+    margin: 2px;
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    background: var(--posts);
+    border: 1px solid var(--borders);
+    box-shadow: inset 1px 1px 0 var(--borders1);
+}
+
+.person img {
+    background: var(--captions);
+}
+
+.person img {
+    margin: 0 8px 0 0;
+    vertical-align: middle;
+    width: 43px;
+    height: 43px;
+    background: var(--posts);
+    /* border: 1px solid var(--borders); */
+}
+
+.f-info {
+    margin: 0;
+    width: calc(100% - 55px);
+}
+
+.center {
+    align-content: center;
+}
+
+.f-title {
+    font-weight: 700;
+}
+
+.f-name {
+    color: var(--text);
+}
+
+.f-name, .f-title {
+    vertical-align: middle;
+    margin: auto 0;
+    width: 100%;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.person:hover {
+    outline: .75px dashed var(--text);
+    outline-offset: -4px;
+    cursor: pointer;
+}
+
+[data-theme="daynight"] body.light .btn.act {
+    background: rgba(255,255,255,.12);
+}
+
+body.light .btn.act {
+    background: rgba(0,0,0,.1);
+}

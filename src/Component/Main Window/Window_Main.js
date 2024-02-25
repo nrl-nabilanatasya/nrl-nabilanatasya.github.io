@@ -6,6 +6,7 @@ import Folder1 from '../Folder/Folder1';
 import Folder2 from '../Folder/Folder2';
 import Folder3 from '../Folder/Folder3';
 import Folder4 from '../Folder/Folder4';
+import Folder5 from '../Folder/Folder5';
 
 export default function Window_Main() {
     return ( 
@@ -25,6 +26,7 @@ export default function Window_Main() {
                     <Folder2 />
                     <Folder3 />
                     <Folder4 />
+                    <Folder5 />
                 </div>
             </div>
         </div>

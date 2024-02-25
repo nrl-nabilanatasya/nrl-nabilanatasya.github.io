@@ -39,6 +39,7 @@ export default function App() {
             <input type="radio" name="tabs-control" id="button_b" onChange={handleButtonChange} hidden />
             <input type="radio" name="tabs-control" id="button_c" onChange={handleButtonChange} hidden />
             <input type="radio" name="tabs-control" id="button_d" onChange={handleButtonChange} hidden />
+            <input type="radio" name="tabs-control" id="button_e" onChange={handleButtonChange} hidden />
 
             {/* TASKBAR */}
             <Taskbar_Main searchVisible={searchVisible} setSearchVisible={setSearchVisible} imageVisible={imageVisible} setImageVisible={setImageVisible} updateVisible={updateVisible} setUpdateVisible={setUpdateVisible} />

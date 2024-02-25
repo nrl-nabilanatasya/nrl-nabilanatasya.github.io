@@ -157,4 +157,25 @@
     .m-to-top,[class^="btn_"],.dc {
         display: inline-flex;
     }
+
+    /* ****************************************************** */
+    [data-theme="daynight"] body.light #button_a:checked~.taskbar>.tasks>.btn_a,
+    [data-theme="daynight"] body.light #button_b:checked~.taskbar>.tasks>.btn_b,
+    [data-theme="daynight"] body.light #button_c:checked~.taskbar>.tasks>.btn_c {
+        background: rgba(255,255,255,.12);
+    }
+
+    #button_a:checked~.taskbar>.tasks>.btn_a, 
+    #button_b:checked~.taskbar>.tasks>.btn_b, 
+    #button_c:checked~.taskbar>.tasks>.btn_c, 
+    #button_d:checked~.taskbar>.tasks>.btn_d, 
+    #button_e:checked~.taskbar>.tasks>.btn_e, 
+    #button_f:checked~.taskbar>.tasks>.btn_f {
+        cursor: default;
+        border-top: 1px solid var(--borders2);
+        border-left: 1px solid var(--borders2);
+        border-right: 1px solid var(--borders1);
+        border-bottom: 1px solid var(--borders1);
+        box-shadow: inset 0 0 1px 1px var(--borders);
+    }
 }

@@ -25,18 +25,4 @@ export function updateTheme() {
 export function toggleWindow(leftButtonData) {
     console.log('clicked!');
     console.log(leftButtonData);
-
-    // return !isActive;
-
-    // const seaButton = leftButtonData.find(
-    //     button => button.className.toLowerCase() === 'sea'.toLowerCase() // Ensure case-insensitivity
-    //   );
-    //   if (seaButton) {
-    //     seaButton.active = !seaButton.active;
-    //     console.log('Clicked and toggled active state:', seaButton);
-    //   }
 }
-
-
-
-// export { updateDate, updateTime, updateTheme, toggleWindow };
