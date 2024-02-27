@@ -28,6 +28,6 @@ const content1 = (
 const content2 = (
     <>
         <h1>Submit a post</h1>
-                                        <p>Submission form here..</p>
+        <p>Submission form here..</p>
     </>
 );

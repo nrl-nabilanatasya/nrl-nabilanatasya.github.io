@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 export function updateDate() {
     const d = new Date();
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -18,11 +20,38 @@ export function updateTime() {
     return formattedTime;
 }
 
-export function updateTheme() {
-    
+export function SetTheme() {
+    useEffect(() => {
+        const checkbox = document.querySelector('.modus');
+        const mode = localStorage.getItem("theme");
+        const isLightMode = mode === "daynight";
+
+        checkbox.checked = isLightMode;
+        document.documentElement.setAttribute("data-theme", isLightMode ? "daynight" : "normal");
+        document.body.classList.toggle("night", isLightMode);
+
+        const switchTheme = (event) => {
+            const isNight = event.target.checked;
+            document.documentElement.setAttribute("data-theme", isNight ? "daynight" : "normal");
+            document.body.classList.toggle("night", isNight);
+            localStorage.setItem("theme", isNight ? "daynight" : "normal");
+        };
+
+        checkbox.addEventListener("change", switchTheme);
+
+        // Clean up the event listener
+        return () => {
+            checkbox.removeEventListener("change", switchTheme);
+        };
+    }, []);
 }
 
-export function toggleWindow(leftButtonData) {
-    console.log('clicked!');
-    console.log(leftButtonData);
+export function SetMobileButton() {
+    useEffect(() => {
+        const classNames = ["th", "fo", "fi", "si", "se", "ei"];
+        const buttons = document.querySelectorAll("[class^='btn_']");
+        const count = buttons.length;
+        const index = Math.min(count, classNames.length) - 1;
+        buttons.forEach(button => button.classList.add(classNames[index]));
+    }, []);
 }

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Folders({fors, className, image, folder_name}) {
     return (
         <label htmlFor={`${fors}`} className={`${className}`}>
@@ -44,6 +46,9 @@ export default function WindowSidebar() {
                         </label> */}
                         
                         {/* LINKS */}
+                        <Link to="/page">
+                            <img src="images/icon/folder2-icon.png" draggable="false" alt="" />Page
+                        </Link>
                         <a href="/" target="_blank">
                             <img src="images/icon/folder2-icon.png" draggable="false" alt="" />Link
                         </a>

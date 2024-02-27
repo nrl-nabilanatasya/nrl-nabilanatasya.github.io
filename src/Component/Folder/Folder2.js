@@ -10,23 +10,23 @@ export default function Folder2() {
             </article> */}
 
             <article>
-                <Window_Header title="Frontend Skills" image="https://win98icons.alexmeub.com/icons/png/wia_img_check-1.png" />
+                <Window_Header title="Frontend Stack" image="https://win98icons.alexmeub.com/icons/png/wia_img_check-1.png" />
                 <Window_Content content={frontend} />
             </article>
 
             <article>
-                <Window_Header title="Backend Skills" image="https://win98icons.alexmeub.com/icons/png/wia_img_check-1.png" />
+                <Window_Header title="Backend Stack" image="https://win98icons.alexmeub.com/icons/png/wia_img_check-1.png" />
                 <Window_Content content={backend} />
             </article>
 
             <article>
-                <Window_Header title="Other Languages" image="https://win98icons.alexmeub.com/icons/png/wia_img_check-1.png" />
-                <Window_Content content={other_lang} />
+                <Window_Header title="Databases" image="https://win98icons.alexmeub.com/icons/png/wia_img_check-1.png" />
+                <Window_Content content={database} />
             </article>
 
             <article>
-                <Window_Header title="Others" image="https://win98icons.alexmeub.com/icons/png/wia_img_check-1.png" />
-                <Window_Content content={other} />
+                <Window_Header title="Development Tools/Platforms" image="https://win98icons.alexmeub.com/icons/png/wia_img_check-1.png" />
+                <Window_Content content={devTool} />
             </article>
         </section>
     );
@@ -95,6 +95,14 @@ const frontend = (
                 <div className="f-name">Basic</div>
             </div>
         </div>
+        
+        <div className="person flex justify">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" />
+            <div className="f-info flex center">
+                <div className="f-title">Bootstrap</div>
+                <div className="f-name">Basic</div>
+            </div>
+        </div>
     </div>
 );
 
@@ -116,6 +124,26 @@ const backend = (
             </div>
         </div>
 
+        <div className="person flex justify">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeigniter/codeigniter-plain.svg" />
+            <div className="f-info flex center">
+                <div className="f-title">codeigniter</div>
+                <div className="f-name">Basic</div>
+            </div>
+        </div>
+
+        <div className="person flex justify">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastify/fastify-original.svg" />
+            <div className="f-info flex center">
+                <div className="f-title">Fastify</div>
+                <div className="f-name">Basic</div>
+            </div>
+        </div>
+    </div>
+);
+
+const database = (
+    <div className="follows">
         <div className="person flex justify">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" />
             <div className="f-info flex center">
@@ -150,44 +178,8 @@ const backend = (
     </div>
 );
 
-const other_lang = (
+const devTool = (
     <div className="follows">
-        <div className="person flex justify">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
-            <div className="f-info flex center">
-                <div className="f-title">C++</div>
-                <div className="f-name">Basic</div>
-            </div>
-        </div>
-    </div>
-);
-
-const other = (
-    <div className="follows">
-        <div className="person flex justify">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" />
-            <div className="f-info flex center">
-                <div className="f-title">Bootstrap</div>
-                <div className="f-name">Basic</div>
-            </div>
-        </div>
-
-        <div className="person flex justify">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeigniter/codeigniter-plain.svg" />
-            <div className="f-info flex center">
-                <div className="f-title">codeigniter</div>
-                <div className="f-name">Basic</div>
-            </div>
-        </div>
-
-        <div className="person flex justify">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastify/fastify-original.svg" />
-            <div className="f-info flex center">
-                <div className="f-title">Fastify</div>
-                <div className="f-name">Basic</div>
-            </div>
-        </div>
-
         <div className="person flex justify">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
             <div className="f-info flex center">

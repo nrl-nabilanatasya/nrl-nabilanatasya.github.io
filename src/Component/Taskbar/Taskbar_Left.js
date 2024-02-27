@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { SetMobileButton } from "../../Helper";
 
 function WindowButton({ title, image, className, active, handleClick}) {
     const activeClass = active ? ' act' : ''; // Add 'act' className if active is true
@@ -54,13 +55,7 @@ export default function Taskbar_Left({ searchVisible, setSearchVisible, imageVis
         setUpdateVisible(!updateVisible);
     };
 
-    useEffect(() => {
-        const classNames = ["th", "fo", "fi", "si", "se", "ei"];
-        const buttons = document.querySelectorAll("[class^='btn_']");
-        const count = buttons.length;
-        const index = Math.min(count, classNames.length) - 1;
-        buttons.forEach(button => button.classList.add(classNames[index]));
-    }, []);
+    SetMobileButton();
 
     return (
         <div className="tasks flex">

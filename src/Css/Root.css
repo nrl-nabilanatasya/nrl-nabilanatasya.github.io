@@ -18,6 +18,8 @@
     /* COLORS */
     --links:#f46e8a;
     --links-hover:#9dc6d7;
+
+    --head: #f0f0f0;
 }
 
 body.light, [data-theme="daynight"] body.dark {

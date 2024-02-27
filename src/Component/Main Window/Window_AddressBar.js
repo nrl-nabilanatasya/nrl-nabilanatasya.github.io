@@ -1,30 +1,8 @@
-import { useEffect } from "react";
+// import { SetTheme } from "../../Helper";
 
 export default function Window_AddressBar() {
-    useEffect(() => {
-        const checkbox = document.querySelector('.modus');
-        const mode = localStorage.getItem("theme");
-        const isLightMode = mode === "daynight";
-
-        checkbox.checked = isLightMode;
-        document.documentElement.setAttribute("data-theme", isLightMode ? "daynight" : "normal");
-        document.body.classList.toggle("night", isLightMode);
-
-        const switchTheme = (event) => {
-            const isNight = event.target.checked;
-            document.documentElement.setAttribute("data-theme", isNight ? "daynight" : "normal");
-            document.body.classList.toggle("night", isNight);
-            localStorage.setItem("theme", isNight ? "daynight" : "normal");
-        };
-
-        checkbox.addEventListener("change", switchTheme);
-
-        // Clean up the event listener
-        return () => {
-            checkbox.removeEventListener("change", switchTheme);
-        };
-    }, []);
-
+    // SetTheme();
+    
     return (
         <div className="address-bar flex justify center">
             {/* PAGE RELOAD */}
