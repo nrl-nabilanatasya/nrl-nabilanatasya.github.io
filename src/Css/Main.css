@@ -40,7 +40,7 @@ p {
     margin: 10px 0
 }
 
-ol,ul {
+ol, ul {
     margin: 0 0 0 3em
 }
 
@@ -48,7 +48,7 @@ ul {
     list-style-type: square
 }
 
-ol li,ul li {
+ol li, ul li {
     margin: 5px 0;
 }
 
@@ -99,7 +99,7 @@ body.night .diemnox {
     display: block;
 }
 
-input[type=checkbox],body.night .moon {
+input[type=checkbox], body.night .moon {
     display: none;
 }
 
@@ -155,12 +155,24 @@ article {
     box-shadow: 3px 3px 0 rgba(50,50,50,.1)
 }
 
-.half,.small,.med,.large {
+.half, .small, .med, .large {
     margin: 0
 }
 
 .half {
     width: calc(50% - (var(--post-gap) / 4))
+}
+
+.small {
+    width: calc(40% - (var(--post-gap) / 4))
+}
+
+.med {
+    width: calc(60% - (var(--post-gap) / 4))
+}
+
+.large {
+    width: 100%
 }
 
 /* Components */

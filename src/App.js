@@ -1,5 +1,7 @@
 // import logo from './logo.svg';
 // import './App.css';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
 import { useState, useRef, useEffect } from 'react';
 
 import './Css/Root.css';
@@ -55,6 +57,9 @@ export default function App() {
 
             {/* Update Window */}
             <Window_Update isVisible={updateVisible} setUpdateVisible={setUpdateVisible} />
+
+            {/* Vercel Speed Insight */}
+            <SpeedInsights />
         </div>
     );
 }
