@@ -17,7 +17,7 @@ function WindowButton({ title, image, className, active, handleClick}) {
 
 export const WindowButtonData = [
     { title: 'Start', image: 'images/icons/power-button.png', className: 'start' },
-    { title: 'Main Window', image: 'images/icons/workspace.png', className: 'posts act' },
+    { title: 'Main Window', image: 'images/icons/workspace.png', className: 'posts' },
     { title: 'Search', image: 'images/icons/searching.png', className: 'sea' },
     { title: 'Image', image: 'images/icons/image.png', className: 'imej' },
     { title: 'Memo', image: 'images/icons/paper.png', className: 'up' },
@@ -43,7 +43,11 @@ export const MobileButtonData = [
     { button: 'button_d', className: 'btn_d', title: 'Folder 4', image:'images/icons/folder.png' },
 ]
 
-export default function Taskbar_Left({ searchVisible, setSearchVisible, imageVisible, setImageVisible, updateVisible, setUpdateVisible }) {
+export default function Taskbar_Left({ mainVisible, setMainVisible, searchVisible, setSearchVisible, imageVisible, setImageVisible, updateVisible, setUpdateVisible }) {
+    const toggleMain = () => {
+        setMainVisible(!mainVisible);
+    };
+    
     const toggleSearch = () => {
         setSearchVisible(!searchVisible);
     };
@@ -62,9 +66,9 @@ export default function Taskbar_Left({ searchVisible, setSearchVisible, imageVis
         <div className="tasks flex">
             {WindowButtonData.map((button) => (
                 <WindowButton key={button.title}
-                active={(button.className === 'sea' && searchVisible) || (button.className === 'imej' && imageVisible) || (button.className === 'up' && updateVisible)}
+                active={(button.className === 'posts' && mainVisible) || (button.className === 'sea' && searchVisible) || (button.className === 'imej' && imageVisible) || (button.className === 'up' && updateVisible)}
                 {...button}
-                handleClick={button.className === 'sea' ? toggleSearch : button.className === 'imej' ? toggleImage : button.className === 'up' ? toggleUpdate : null}
+                handleClick={button.className === 'posts' ? toggleMain : button.className === 'sea' ? toggleSearch : button.className === 'imej' ? toggleImage : button.className === 'up' ? toggleUpdate : null}
                 />
             ))}
 

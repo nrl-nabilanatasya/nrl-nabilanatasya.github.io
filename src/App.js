@@ -33,6 +33,7 @@ export default function App() {
     };
     
     // show or hide window
+    const [mainVisible, setMainVisible] = useState(true);
     const [searchVisible, setSearchVisible] = useState(false);
     const [imageVisible, setImageVisible] = useState(false);
     const [updateVisible, setUpdateVisible] = useState(false);
@@ -48,10 +49,10 @@ export default function App() {
                 <input type="radio" name="tabs-control" id="button_f" onChange={handleButtonChange} hidden />
                 
                 {/* TASKBAR */}
-                <Taskbar_Main searchVisible={searchVisible} setSearchVisible={setSearchVisible} imageVisible={imageVisible} setImageVisible={setImageVisible} updateVisible={updateVisible} setUpdateVisible={setUpdateVisible} />
+                <Taskbar_Main mainVisible={mainVisible} setMainVisible={setMainVisible} searchVisible={searchVisible} setSearchVisible={setSearchVisible} imageVisible={imageVisible} setImageVisible={setImageVisible} updateVisible={updateVisible} setUpdateVisible={setUpdateVisible} />
                 
                 {/* MAIN WINDOW */}
-                <Window_Main />
+                <Window_Main isVisible={mainVisible} setMainVisible={setMainVisible} />
                 
                 {/* SEARCH WINDOW */}
                 <Window_Search isVisible={searchVisible} setSearchVisible={setSearchVisible} />

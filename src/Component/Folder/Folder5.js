@@ -10,7 +10,7 @@ export default function Folder5() {
             </article>
 
             <article>
-                <Window_Header title="Submission Form" image="imagess/icon/conversation.png" />
+                <Window_Header title="Submission Form" image="images/icons/conversation.png" />
                 <Window_Content content={content2} />
             </article>
         </section>

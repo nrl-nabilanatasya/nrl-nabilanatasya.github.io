@@ -1,3 +1,5 @@
+import Draggable from 'react-draggable';
+
 import Window_Header from './Window_Header';
 import Window_AddressBar from './Window_AddressBar';
 import Window_Sidebar from './Window_Sidebar';
@@ -8,11 +10,12 @@ import Folder_Project from '../Folder/Folder_Project';
 import Folder4 from '../Folder/Folder4';
 import Folder5 from '../Folder/Folder5';
 
-export default function Window_Main() {
+export default function Window_Main({ isVisible, setMainVisible }) {
     return ( 
-        <div className="package flex justify">
+        <Draggable>
+        <div className={`package flex justify ${isVisible ? 'visible' : 'hidden'}`}>
             <div className="packhead">
-                <Window_Header title="Main Window" image="images/icons/workspace.png" />
+                <Window_Header title="Main Window" image="images/icons/workspace.png" mainVisible={isVisible} setMainVisible={setMainVisible} />
                 <Window_AddressBar />
             </div>
             
@@ -30,5 +33,6 @@ export default function Window_Main() {
                 </div>
             </div>
         </div>
+        </Draggable>
     );
 }
