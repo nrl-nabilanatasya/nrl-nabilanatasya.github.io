@@ -8,7 +8,7 @@ export default function Window_Update({ isVisible, setUpdateVisible }) {
         <Draggable>
             <div className={`up-wrap${isVisible ? ' visible' : ' hidden'}`}>
                 <article>
-                    <Window_Header title="Update" image="images/icon/search-icon.png" updateVisible={isVisible} setUpdateVisible={setUpdateVisible} />
+                    <Window_Header title="Memo" image="images/icons/paper.png" updateVisible={isVisible} setUpdateVisible={setUpdateVisible} />
                     <Window_Content content={content}/>
                 </article>
             </div>

@@ -17,7 +17,7 @@ export default function Page() {
             <div className="container">
                 <h1>Page</h1>
                 <div className="content">
-                    <Window_Header title="Page Window Title" image="https://win98icons.alexmeub.com/icons/png/event_log.png" />
+                    <Window_Header title="Page Window Title" image="images/icons/new-window.png" />
                     <Window_Content content={content} />
                 </div>
             </div>

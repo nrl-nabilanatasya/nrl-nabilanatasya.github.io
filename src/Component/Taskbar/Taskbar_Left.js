@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { SetMobileButton } from "../../Helper";
 
 function WindowButton({ title, image, className, active, handleClick}) {
@@ -17,11 +16,11 @@ function WindowButton({ title, image, className, active, handleClick}) {
 }
 
 export const WindowButtonData = [
-    { title: 'Start', image: 'images/icon/computer-icon.png', className: 'start' },
-    { title: 'Nuwa', image: 'images/cat.png', className: 'posts act' },
-    { title: 'Search', image: 'images/icon/search-icon.png', className: 'sea' },
-    { title: 'Image', image: 'images/icon/search-icon.png', className: 'imej' },
-    { title: 'Update', image: 'images/icon/search-icon.png', className: 'up' },
+    { title: 'Start', image: 'images/icons/power-button.png', className: 'start' },
+    { title: 'Main Window', image: 'images/icons/workspace.png', className: 'posts act' },
+    { title: 'Search', image: 'images/icons/searching.png', className: 'sea' },
+    { title: 'Image', image: 'images/icons/image.png', className: 'imej' },
+    { title: 'Memo', image: 'images/icons/paper.png', className: 'up' },
 ];
 
 function MobileButton({ button, className, title, image }) {
@@ -37,9 +36,11 @@ function MobileButton({ button, className, title, image }) {
 }
 
 export const MobileButtonData = [
-    { button: 'button_a', className: 'btn_a', title: 'Folder 1', image:'images/icon/folder-icon.png' },
-    { button: 'button_b', className: 'btn_b', title: 'Folder 2', image:'images/icon/folder-icon.png' },
-    { button: 'button_c', className: 'btn_c', title: 'Folder 3', image:'images/icon/folder-icon.png' },
+    { button: 'button_a', className: 'btn_a', title: 'Main Window', image:'images/icons/workspace.png' },
+    { button: 'button_b', className: 'btn_b', title: 'Skill', image:'images/icons/elearning.png' },
+    { button: 'button_e', className: 'btn_e', title: 'Experience', image:'images/icons/growth.png' },
+    { button: 'button_c', className: 'btn_c', title: 'Projects', image:'images/icons/project.png' },
+    { button: 'button_d', className: 'btn_d', title: 'Folder 4', image:'images/icons/folder.png' },
 ]
 
 export default function Taskbar_Left({ searchVisible, setSearchVisible, imageVisible, setImageVisible, updateVisible, setUpdateVisible }) {

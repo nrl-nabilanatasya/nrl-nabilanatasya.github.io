@@ -8,7 +8,7 @@ export default function Window_Image({ isVisible, setImageVisible }) {
         <Draggable>
             <div className={`image-wrap${isVisible ? ' visible' : ' hidden'}`}>
                 <article>
-                    <Window_Header title="Image" image="images/icon/search-icon.png" imageVisible={isVisible} setImageVisible={setImageVisible} />
+                    <Window_Header title="Image" image="images/icons/image.png" imageVisible={isVisible} setImageVisible={setImageVisible} />
                     <Window_Content content={content} />
                 </article>
             </div>

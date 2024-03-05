@@ -28,14 +28,14 @@ export default function Folder3() {
         <section className="tab_c">
             <div className="explore flex justify">
                 <article>
-                    <Window_Header title="Folder Filter" image="https://win98icons.alexmeub.com/icons/png/appwizard-5.png" />
+                    <Window_Header title="Folder Filter" image="images/icons/project.png" />
                     <Window_Content content={content1(selectedFilter, handleFilter)} />
                 </article>
 
                 {mini_windows.map(({ filter, optionClass, title, content }) => (
                     <div key={title} className={`half ${optionClass} ${hideOption(filter) ? 'hidden' : ''}`}>
                         <article>
-                            <Window_Header title={title} image="https://win98icons.alexmeub.com/icons/png/appwizard-5.png" />
+                            <Window_Header title={title} image="images/icons/project.png" />
                             <Window_Content content={content} />
                             <Window_Footer />
                         </article>

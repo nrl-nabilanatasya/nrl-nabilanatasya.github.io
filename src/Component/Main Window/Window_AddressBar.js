@@ -24,7 +24,7 @@ export default function Window_AddressBar() {
             {/* ADDRESS */}
             <div className="address flex center">
                 <div className="a-info flex center">
-                    <div className="a-name"> https://test.com </div>
+                    <div className="a-name"> https://nabilanatasya.dev </div>
                 </div>
             </div>
 

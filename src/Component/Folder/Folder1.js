@@ -6,7 +6,7 @@ export default function Folder1() {
         <section className="tab_a">
             <div className="about flex justify">
                 <article>
-                    <Window_Header title="About" image="images/icon/user-icon.png" />
+                    <Window_Header title="About" image="images/icons/virtual-meeting.png" />
                     <Window_Content content={content} />
                 </article>
             </div>

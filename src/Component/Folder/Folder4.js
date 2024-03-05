@@ -6,7 +6,7 @@ export default function Folder4() {
         <section className="tab_d">
             <div className="no-posts">
                 <article>
-                    <Window_Header title="folder 4 title" image="images/cat.png" />
+                    <Window_Header title="folder 4 title" image="images/icons/folder.png" />
                     <Window_Content content={content} />
                 </article>
             </div>

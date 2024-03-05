@@ -12,7 +12,7 @@ export default function Window_Main() {
     return ( 
         <div className="package flex justify">
             <div className="packhead">
-                <Window_Header title="Window_Main" image="images/cat.png" />
+                <Window_Header title="Main Window" image="images/icons/workspace.png" />
                 <Window_AddressBar />
             </div>
             

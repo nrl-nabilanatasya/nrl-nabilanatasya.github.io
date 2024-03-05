@@ -8,7 +8,6 @@ import { SetTheme } from "../src/Helper";
 import './Css/Root.css';
 import './Css/Main.css';
 import './Css/Mobile.css';
-import './Css/Test.css';
 import './Css/Page.css';
 
 import Taskbar_Main from './Component/Taskbar/Taskbar_Main';

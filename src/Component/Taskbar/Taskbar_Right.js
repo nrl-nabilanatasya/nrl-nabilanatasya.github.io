@@ -18,7 +18,7 @@ export default function Taskbar_Right() {
         <div className="tasks2 flex">
             <div className="clock-wrap flex center">
                 <div className="linfo flex center">
-                    <img src="images/icon/calendar-icon.png" draggable="false" alt="" />
+                    <img src="images/icons/schedule.png" draggable="false" alt="" />
                     <div id="date">{date}</div>
                 </div>
             </div>
@@ -26,7 +26,7 @@ export default function Taskbar_Right() {
             <div className="clock-wrap flex center">
                 <div className="linfo flex center">
                     <div className="ltitle">
-                        <img src="images/icon/time-icon.png" draggable="false" alt=""/>
+                        <img src="images/icons/digital-clock.png" draggable="false" alt=""/>
                         <div id="clock">{time}</div>
                     </div>
                 </div>

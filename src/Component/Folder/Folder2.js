@@ -5,27 +5,27 @@ export default function Folder2() {
     return ( 
         <section className="tab_b">
             {/* <article>
-                <Window_Header title="Skills Style 1" image="https://win98icons.alexmeub.com/icons/png/wia_img_check-1.png" />
+                <Window_Header title="Skills Style 1" image="images/icons/elearning.png" />
                 <Window_Content content={content1} />
             </article> */}
 
             <article>
-                <Window_Header title="Frontend Stack" image="https://win98icons.alexmeub.com/icons/png/wia_img_check-1.png" />
+                <Window_Header title="Frontend Stack" image="images/icons/elearning.png" />
                 <Window_Content content={frontend} />
             </article>
 
             <article>
-                <Window_Header title="Backend Stack" image="https://win98icons.alexmeub.com/icons/png/wia_img_check-1.png" />
+                <Window_Header title="Backend Stack" image="images/icons/elearning.png" />
                 <Window_Content content={backend} />
             </article>
 
             <article>
-                <Window_Header title="Databases" image="https://win98icons.alexmeub.com/icons/png/wia_img_check-1.png" />
+                <Window_Header title="Databases" image="images/icons/elearning.png" />
                 <Window_Content content={database} />
             </article>
 
             <article>
-                <Window_Header title="Development Tools/Platforms" image="https://win98icons.alexmeub.com/icons/png/wia_img_check-1.png" />
+                <Window_Header title="Development Tools/Platforms" image="images/icons/elearning.png" />
                 <Window_Content content={devTool} />
             </article>
         </section>

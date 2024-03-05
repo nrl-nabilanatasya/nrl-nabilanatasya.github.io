@@ -8,7 +8,7 @@ export default function Window_Search({ isVisible, setSearchVisible }) {
         <Draggable>
             <div className={`search-wrap${isVisible ? ' visible' : ' hidden'}`}>
                 <article>
-                    <Window_Header title="Search" image="images/icon/search-icon.png" searchVisible={isVisible} setSearchVisible={setSearchVisible} />
+                    <Window_Header title="Search" image="images/icons/searching.png" searchVisible={isVisible} setSearchVisible={setSearchVisible} />
                     <Window_Content />
                 </article>
             </div>
