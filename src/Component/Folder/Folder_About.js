@@ -1,7 +1,7 @@
 import Window_Header from '../Main Window/Window_Header';
 import Window_Content from '../Main Window/Window_Content';
 
-export default function Folder1() {
+export default function Folder_About() {
     return ( 
         <section className="tab_a">
             <div className="about flex justify">
@@ -17,7 +17,7 @@ export default function Folder1() {
 // this folder content value
 const content = (
     <>
-        Meet <b>Nurul Nabila</b>, Software Developer with a curious mind and a drive to create well-crafted software solutions. My journey began with a Bachelor's degree in Computer Science, laying the foundation for my current role as a Full-Stack Developer at Cloone Corporation.<br /><br />
+        Meet <b>Nurul Nabila Natasya</b>, Software Developer with a curious mind and a drive to create well-crafted software solutions. My journey began with a Bachelor's degree in Computer Science, laying the foundation for my current role as a Full-Stack Developer at Cloone Corporation.<br /><br />
         
         Over the past 2 years, I've gained valuable experience in:<br />
         <ul>

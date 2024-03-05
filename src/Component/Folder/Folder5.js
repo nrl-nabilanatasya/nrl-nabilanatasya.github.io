@@ -5,12 +5,12 @@ export default function Folder5() {
     return ( 
         <section className="tab_f">
             <article>
-                <Window_Header title="Ask Form" image="images/icon/question-icon.png" />
+                <Window_Header title="Ask Form" image="images/icons/conversation.png" />
                 <Window_Content content={content1} />
             </article>
 
             <article>
-                <Window_Header title="Submission Form" image="images/icon/question-icon.png" />
+                <Window_Header title="Submission Form" image="imagess/icon/conversation.png" />
                 <Window_Content content={content2} />
             </article>
         </section>

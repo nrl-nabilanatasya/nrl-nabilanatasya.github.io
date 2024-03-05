@@ -2,9 +2,9 @@ import Window_Header from './Window_Header';
 import Window_AddressBar from './Window_AddressBar';
 import Window_Sidebar from './Window_Sidebar';
 
-import Folder1 from '../Folder/Folder1';
-import Folder2 from '../Folder/Folder2';
-import Folder3 from '../Folder/Folder3';
+import Folder_About from '../Folder/Folder_About';
+import Folder_Skill from '../Folder/Folder_Skill';
+import Folder_Project from '../Folder/Folder_Project';
 import Folder4 from '../Folder/Folder4';
 import Folder5 from '../Folder/Folder5';
 
@@ -22,9 +22,9 @@ export default function Window_Main() {
 
             <div className="wrapper">
                 <div className="tabs">
-                    <Folder1 />
-                    <Folder2 />
-                    <Folder3 />
+                    <Folder_About />
+                    <Folder_Skill />
+                    <Folder_Project />
                     <Folder4 />
                     <Folder5 />
                 </div>

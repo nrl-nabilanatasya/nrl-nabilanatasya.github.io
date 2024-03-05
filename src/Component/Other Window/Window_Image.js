@@ -19,6 +19,6 @@ export default function Window_Image({ isVisible, setImageVisible }) {
 // this folder content value
 const content = (
     <>
-        <img src="assets/images/Catto.png" alt='' />
+        <img src="images/nurul/nurul.jpg" alt='' />
     </>
 );

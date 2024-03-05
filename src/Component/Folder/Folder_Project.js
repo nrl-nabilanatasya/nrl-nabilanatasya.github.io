@@ -4,9 +4,10 @@ import Window_Header from '../Main Window/Window_Header';
 import Window_Content from '../Main Window/Window_Content';
 import Window_Footer from '../Main Window/Window_Footer';
 
-import { content1, content2, content3, content4 } from './Folder3_Content'; // Importing content constants
+// Importing content constants
+import { content1, content2, content3, content4 } from './Folder_Project_Content'; 
 
-export default function Folder3() {
+export default function Folder_Project() {
     const [selectedFilter, setSelectedFilter] = useState('a_filter'); // Initial selection
 
     const handleFilter = (event) => {

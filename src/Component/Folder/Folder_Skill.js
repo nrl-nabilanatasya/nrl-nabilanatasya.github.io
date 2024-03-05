@@ -1,7 +1,7 @@
 import Window_Header from '../Main Window/Window_Header';
 import Window_Content from '../Main Window/Window_Content';
 
-export default function Folder2() {
+export default function Folder_Skill() {
     return ( 
         <section className="tab_b">
             {/* <article>

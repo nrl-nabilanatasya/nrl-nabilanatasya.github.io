@@ -40,7 +40,6 @@ export function updateTime() {
     return formattedTime;
 }
 
-
 export function SetTheme() {
     useEffect(() => {
         const checkbox = document.querySelector('.modus');

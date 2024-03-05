@@ -8,7 +8,7 @@ export default function Window_Popup() {
         <Draggable>
             <div className={`popup-wrap visible`}>
                 <article>
-                    <Window_Header title="Popup" image="images/icon/search-icon.png" />
+                    <Window_Header title="Popup" image="images/icons/folder.png" />
                     <Window_Content content={content} />
                 </article>
             </div>
@@ -19,6 +19,6 @@ export default function Window_Popup() {
 // this folder content value
 const content = (
     <>
-        <img src="assets/images/Catto.png" alt='' />
+        This is popup.
     </>
 );
