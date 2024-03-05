@@ -12,12 +12,20 @@ export function updateDate() {
 }
 
 export function updateTime() {
-    const d = new Date();
-    const hours = d.getHours() % 12; // Use 12-hour format
-    const minutes = d.getMinutes().toString().padStart(2, '0'); // Add leading zero
-    const ampm = hours >= 12 ? 'PM' : 'AM';
-    const formattedTime = `${hours}:${minutes} ${ampm}`;
-    return formattedTime;
+    // const d = new Date();
+    // const hours = d.getHours() % 12; // Use 12-hour format
+    // const minutes = d.getMinutes().toString().padStart(2, '0'); // Add leading zero
+    // const ampm = hours >= 12 ? 'PM' : 'AM';
+    // const formattedTime = `${hours}:${minutes} ${ampm}`;
+    // return formattedTime;
+
+    var t = new Date();
+    var e = t.getHours();
+    var a = t.getMinutes();
+    var l = e < 12 ? "AM" : "PM";
+    var s = +(e = 0 == (e = e > 12 ? e - 12 : e) ? 12 : e) + ":" + (a = (a < 10 ? "0" : "") + a) + " " + l;
+
+    return s;
 }
 
 export function SetTheme() {
