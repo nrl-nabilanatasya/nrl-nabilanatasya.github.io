@@ -4,7 +4,6 @@ import { Analytics } from "@vercel/analytics/react"
 import { useState, useRef, useEffect } from 'react';
 
 import { SetTheme } from "../src/Helper";
-import { testing } from '../src/Helper';
 
 import './Css/Root.css';
 import './Css/Main.css';
@@ -20,8 +19,6 @@ import Window_Update from './Component/Other Window/Window_Update';
 
 export default function App() {
     SetTheme();
-
-    const testing = testing(selectedButton, setSelectedButton, buttonARef);
 
     const [selectedButton, setSelectedButton] = useState('button_a'); // Initial selection
     const buttonARef = useRef(null);
