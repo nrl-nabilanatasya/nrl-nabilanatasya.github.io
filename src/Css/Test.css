@@ -10,7 +10,6 @@
 
 .content1 .radio {
     width: 100%;
-    /* margin: 0 1px 0 0;  */
     padding: 4px 10px;
     background: var(--posts);
     color: var(--text);
@@ -22,15 +21,19 @@
     text-align: center;
 }
 
-.content1 .radio .act {
+.radio .act {
     border-top: 1px solid var(--borders2);
     border-left: 1px solid var(--borders2);
     border-bottom: 1px solid var(--borders1);
     border-right: 1px solid var(--borders1);
 }
 
-body.dark .radio.act { /* later check again at line 2509 */
-    background: var(--accent1); 
+[data-theme="daynight"] body.light .radio.act {
+    background: rgba(255, 255, 255, .12);
+}
+
+.radio.act {
+    background: rgba(0, 0, 0, .1);
 }
 
 /* ****************************************************** */

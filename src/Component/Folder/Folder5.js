@@ -3,7 +3,7 @@ import Window_Content from '../Main Window/Window_Content';
 
 export default function Folder5() {
     return ( 
-        <section className="tab_e">
+        <section className="tab_f">
             <article>
                 <Window_Header title="Ask Form" image="images/icon/question-icon.png" />
                 <Window_Content content={content1} />

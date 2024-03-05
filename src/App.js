@@ -1,6 +1,6 @@
-// import logo from './logo.svg';
-// import './App.css';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from "@vercel/analytics/react"
+
 import { useState, useRef, useEffect } from 'react';
 
 import { SetTheme } from "../src/Helper";
@@ -46,6 +46,7 @@ export default function App() {
                 <input type="radio" name="tabs-control" id="button_c" onChange={handleButtonChange} hidden />
                 <input type="radio" name="tabs-control" id="button_d" onChange={handleButtonChange} hidden />
                 <input type="radio" name="tabs-control" id="button_e" onChange={handleButtonChange} hidden />
+                <input type="radio" name="tabs-control" id="button_f" onChange={handleButtonChange} hidden />
                 
                 {/* TASKBAR */}
                 <Taskbar_Main searchVisible={searchVisible} setSearchVisible={setSearchVisible} imageVisible={imageVisible} setImageVisible={setImageVisible} updateVisible={updateVisible} setUpdateVisible={setUpdateVisible} />
@@ -64,6 +65,9 @@ export default function App() {
                 
                 {/* Vercel Speed Insight */}
                 <SpeedInsights />
+
+                {/* Vercel Analytics */}
+                <Analytics />
             </div>
     );
 }

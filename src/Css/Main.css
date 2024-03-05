@@ -601,12 +601,12 @@ body.dark [class^="btn_"].act, body.dark .btn.act, body.dark .tasks2 a:active { 
     margin-bottom: 0;
 }
 
-.folds a:last-of-type {
+.folds a:last-of-type, .folds label:last-of-type {
     margin-top: 1px;
     border-width: 0
 }
 
-.folds a:last-of-type:before {
+.folds a:last-of-type:before, .folds label:last-of-type:before {
     content: "";
     position: absolute;
     top: calc((var(--line-hgt) / 2) + 2px);
@@ -622,7 +622,17 @@ body.dark [class^="btn_"].act, body.dark .btn.act, body.dark .tasks2 a:active { 
     bottom: calc((var(--line-hgt) / 2) + 7px);
     left: 0;
     width: 10px;
-    height: calc(100% - 10px);
+    height: calc(100% - 16px);
+    border-left: 1px dotted var(--sideborders)
+}
+
+.folds label:last-of-type:after {
+    content: "";
+    position: absolute;
+    bottom: calc((var(--line-hgt) / 2) + 7px);
+    left: 0;
+    width: 10px;
+    height: calc(100% - 1px);
     border-left: 1px dotted var(--sideborders)
 }
 
@@ -719,6 +729,14 @@ body.dark [class^="btn_"].act, body.dark .btn.act, body.dark .tasks2 a:active { 
     margin: 0 auto;
     width: var(--post-size);
     animation: fadein 0.4s ease-in-out forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 */
+    }
 }
 
 .tabs::-webkit-scrollbar,.sidebox::-webkit-scrollbar,.desc::-webkit-scrollbar,.up::-webkit-scrollbar {
