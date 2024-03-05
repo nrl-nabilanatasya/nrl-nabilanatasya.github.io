@@ -11,8 +11,11 @@ import Folder4 from '../Folder/Folder4';
 import Folder5 from '../Folder/Folder5';
 
 export default function Window_Main({ isVisible, setMainVisible }) {
+    const isLargeScreen = window.innerWidth > 850;
+    console.log(window.innerWidth);
+
     return ( 
-        <Draggable>
+        // <Draggable>
         <div className={`package flex justify ${isVisible ? 'visible' : 'hidden'}`}>
             <div className="packhead">
                 <Window_Header title="Main Window" image="images/icons/workspace.png" mainVisible={isVisible} setMainVisible={setMainVisible} />
@@ -33,6 +36,6 @@ export default function Window_Main({ isVisible, setMainVisible }) {
                 </div>
             </div>
         </div>
-        </Draggable>
+        // </Draggable>
     );
 }

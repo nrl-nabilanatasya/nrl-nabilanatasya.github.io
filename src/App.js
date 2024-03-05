@@ -35,7 +35,7 @@ export default function App() {
     
     // show or hide window
     const [startVisible, setStartVisible] = useState(false);
-    const [mainVisible, setMainVisible] = useState(false);
+    const [mainVisible, setMainVisible] = useState(window.innerWidth < 850); //make the main window stay open for small screen, 
     const [searchVisible, setSearchVisible] = useState(false);
     const [imageVisible, setImageVisible] = useState(false);
     const [updateVisible, setUpdateVisible] = useState(false);
