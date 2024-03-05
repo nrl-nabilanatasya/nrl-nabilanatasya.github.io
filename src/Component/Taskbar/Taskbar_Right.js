@@ -14,6 +14,8 @@ export default function Taskbar_Right() {
         };
     }, []);
 
+    console.log(time)
+
     return (
         <div className="tasks2 flex">
             <div className="clock-wrap flex center">

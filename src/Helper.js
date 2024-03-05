@@ -11,22 +11,35 @@ export function updateDate() {
     return formattedDate;
 }
 
+// export function updateTime() {
+//     var t = new Date();
+//     var e = t.getHours();
+//     var a = t.getMinutes();
+//     var l = e < 12 ? "AM" : "PM";
+//     var s = +(e = 0 == (e = e > 12 ? e - 12 : e) ? 12 : e) + ":" + (a = (a < 10 ? "0" : "") + a) + " " + l;
+
+//     return s;
+// }
+
 export function updateTime() {
-    // const d = new Date();
-    // const hours = d.getHours() % 12; // Use 12-hour format
-    // const minutes = d.getMinutes().toString().padStart(2, '0'); // Add leading zero
-    // const ampm = hours >= 12 ? 'PM' : 'AM';
-    // const formattedTime = `${hours}:${minutes} ${ampm}`;
-    // return formattedTime;
+    // Create a date object for the current time in Kuala Lumpur time zone
+    const now = new Date().toLocaleString('en-US', { timeZone: 'Asia/Kuala_Lumpur' });
 
-    var t = new Date();
-    var e = t.getHours();
-    var a = t.getMinutes();
-    var l = e < 12 ? "AM" : "PM";
-    var s = +(e = 0 == (e = e > 12 ? e - 12 : e) ? 12 : e) + ":" + (a = (a < 10 ? "0" : "") + a) + " " + l;
+    // Extract hours and minutes from the current time
+    const [hours, minutes] = now.split(',')[1].trim().split(':');
 
-    return s;
+    // Determine whether it's AM or PM
+    const meridiem = parseInt(hours) < 12 ? "AM" : "PM";
+
+    // Format the hours to 12-hour format
+    const formattedHours = parseInt(hours) === 0 ? 12 : parseInt(hours) > 12 ? parseInt(hours) - 12 : parseInt(hours);
+
+    // Format the time as HH:MM AM/PM
+    const formattedTime = `${formattedHours}:${minutes} ${meridiem}`;
+
+    return formattedTime;
 }
+
 
 export function SetTheme() {
     useEffect(() => {
