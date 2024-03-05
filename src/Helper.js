@@ -75,3 +75,13 @@ export function SetMobileButton() {
         buttons.forEach(button => button.classList.add(classNames[index]));
     }, []);
 }
+
+export function testing(selectedButton, setSelectedButton, buttonRef) {
+    return (event) => {
+        setSelectedButton(event.target.id);
+        // Check the button if it's selected
+        if (event.target.id === selectedButton) {
+            buttonRef.current.checked = true;
+        }
+    };
+}

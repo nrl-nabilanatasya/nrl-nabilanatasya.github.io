@@ -43,7 +43,11 @@ export const MobileButtonData = [
     { button: 'button_d', className: 'btn_d', title: 'Folder 4', image:'images/icons/folder.png' },
 ]
 
-export default function Taskbar_Left({ mainVisible, setMainVisible, searchVisible, setSearchVisible, imageVisible, setImageVisible, updateVisible, setUpdateVisible }) {
+export default function Taskbar_Left({ startVisible, setStartVisible, mainVisible, setMainVisible, searchVisible, setSearchVisible, imageVisible, setImageVisible, updateVisible, setUpdateVisible }) {
+    const toggleStart = () => {
+        setStartVisible(!startVisible);
+    };
+
     const toggleMain = () => {
         setMainVisible(!mainVisible);
     };
@@ -66,9 +70,9 @@ export default function Taskbar_Left({ mainVisible, setMainVisible, searchVisibl
         <div className="tasks flex">
             {WindowButtonData.map((button) => (
                 <WindowButton key={button.title}
-                active={(button.className === 'posts' && mainVisible) || (button.className === 'sea' && searchVisible) || (button.className === 'imej' && imageVisible) || (button.className === 'up' && updateVisible)}
+                active={(button.className === 'start' && startVisible) || (button.className === 'posts' && mainVisible) || (button.className === 'sea' && searchVisible) || (button.className === 'imej' && imageVisible) || (button.className === 'up' && updateVisible)}
                 {...button}
-                handleClick={button.className === 'posts' ? toggleMain : button.className === 'sea' ? toggleSearch : button.className === 'imej' ? toggleImage : button.className === 'up' ? toggleUpdate : null}
+                handleClick={button.className === 'start' ? toggleStart : button.className === 'posts' ? toggleMain : button.className === 'sea' ? toggleSearch : button.className === 'imej' ? toggleImage : button.className === 'up' ? toggleUpdate : null}
                 />
             ))}
 

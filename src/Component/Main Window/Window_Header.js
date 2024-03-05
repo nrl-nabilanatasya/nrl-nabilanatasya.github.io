@@ -1,7 +1,10 @@
 // import { useState } from "react";
 
-export default function Window_Header({ title, image, mainVisible, setMainVisible, searchVisible, setSearchVisible, imageVisible, setImageVisible, updateVisible, setUpdateVisible }) {
+export default function Window_Header({ title, image, startVisible, setStartVisible, mainVisible, setMainVisible, searchVisible, setSearchVisible, imageVisible, setImageVisible, updateVisible, setUpdateVisible }) {
     const toggleVisibility = () => {
+        if (startVisible !== undefined && setStartVisible !== undefined) {
+            setStartVisible(!startVisible);
+        }
         if (mainVisible !== undefined && setMainVisible !== undefined) {
             setMainVisible(!mainVisible);
         }

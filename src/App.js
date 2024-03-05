@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react"
 import { useState, useRef, useEffect } from 'react';
 
 import { SetTheme } from "../src/Helper";
+import { testing } from '../src/Helper';
 
 import './Css/Root.css';
 import './Css/Main.css';
@@ -12,12 +13,15 @@ import './Css/Page.css';
 
 import Taskbar_Main from './Component/Taskbar/Taskbar_Main';
 import Window_Main from './Component/Main Window/Window_Main';
+import Window_Start from './Component/Other Window/Window_Start';
 import Window_Search from './Component/Other Window/Window_Search';
 import Window_Image from './Component/Other Window/Window_Image';
 import Window_Update from './Component/Other Window/Window_Update';
 
 export default function App() {
     SetTheme();
+
+    const testing = testing(selectedButton, setSelectedButton, buttonARef);
 
     const [selectedButton, setSelectedButton] = useState('button_a'); // Initial selection
     const buttonARef = useRef(null);
@@ -33,7 +37,8 @@ export default function App() {
     };
     
     // show or hide window
-    const [mainVisible, setMainVisible] = useState(true);
+    const [startVisible, setStartVisible] = useState(false);
+    const [mainVisible, setMainVisible] = useState(false);
     const [searchVisible, setSearchVisible] = useState(false);
     const [imageVisible, setImageVisible] = useState(false);
     const [updateVisible, setUpdateVisible] = useState(false);
@@ -49,8 +54,16 @@ export default function App() {
                 <input type="radio" name="tabs-control" id="button_f" onChange={handleButtonChange} hidden />
                 
                 {/* TASKBAR */}
-                <Taskbar_Main mainVisible={mainVisible} setMainVisible={setMainVisible} searchVisible={searchVisible} setSearchVisible={setSearchVisible} imageVisible={imageVisible} setImageVisible={setImageVisible} updateVisible={updateVisible} setUpdateVisible={setUpdateVisible} />
-                
+                <Taskbar_Main 
+                startVisible={startVisible} setStartVisible={setStartVisible} 
+                mainVisible={mainVisible} setMainVisible={setMainVisible} 
+                searchVisible={searchVisible} setSearchVisible={setSearchVisible} 
+                imageVisible={imageVisible} setImageVisible={setImageVisible} 
+                updateVisible={updateVisible} setUpdateVisible={setUpdateVisible} />
+
+                {/* START WINDOW */}
+                <Window_Start isVisible={startVisible} setStartVisible={setStartVisible} />
+
                 {/* MAIN WINDOW */}
                 <Window_Main isVisible={mainVisible} setMainVisible={setMainVisible} />
                 
