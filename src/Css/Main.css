@@ -471,7 +471,7 @@ body.dark [class^="btn_"].act, body.dark .btn.act, body.dark .tasks2 a:active { 
 .w-title {
     vertical-align: middle;
     margin: auto 0;
-    width: 100%;
+    width: 90%; /* 100%; */
     color: var(--text);
     white-space: nowrap;
     overflow: hidden;
@@ -784,12 +784,14 @@ body.dark [class^="btn_"].act, body.dark .btn.act, body.dark .tasks2 a:active { 
 #button_d:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_d,
 #button_e:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_e,
 #button_f:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_f,
+#button_g:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_g,
 #button_a:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_a:hover,
 #button_b:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_b:hover,
 #button_c:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_c:hover,
 #button_d:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_d:hover,
 #button_e:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_e:hover,
-#button_f:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_f:hover {
+#button_f:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_f:hover,
+#button_g:checked~.package>.sidebar>.sidebox>.folders>.folds>label.folder_g:hover {
     cursor: default;
     background: var(--accent1);
     color: var(--accent-text);
@@ -869,7 +871,8 @@ body.dark [class^="btn_"].act, body.dark .btn.act, body.dark .tasks2 a:active { 
 #button_c:checked~.package>.wrapper>.tabs>.tab_c,
 #button_d:checked~.package>.wrapper>.tabs>.tab_d,
 #button_e:checked~.package>.wrapper>.tabs>.tab_e,
-#button_f:checked~.package>.wrapper>.tabs>.tab_f {
+#button_f:checked~.package>.wrapper>.tabs>.tab_f,
+#button_g:checked~.package>.wrapper>.tabs>.tab_g {
     display: block;
 }
 
@@ -878,8 +881,73 @@ body.dark [class^="btn_"].act, body.dark .btn.act, body.dark .tasks2 a:active { 
 #button_c:checked~.taskbar>.tasks>.btn_c:hover,
 #button_d:checked~.taskbar>.tasks>.btn_d:hover,
 #button_e:checked~.taskbar>.tasks>.btn_e:hover,
-#button_f:checked~.taskbar>.tasks>.btn_f:hover {
+#button_f:checked~.taskbar>.tasks>.btn_f:hover,
+#button_g:checked~.taskbar>.tasks>.btn_g:hover {
     outline: 0 solid transparent;
+}
+
+/* ---------- POST ---------- */
+.bar {
+    margin: 0;
+    padding: 8px 5px;
+    width: 100%;
+    border-top: 1px solid var(--borders2);
+    box-shadow: inset 0 1px 0 var(--borders1)
+}
+
+.bar p,.bar a {
+    display: inline-block;
+    margin: 0 2px 0 0;
+    padding: 2px 5px;
+    color: var(--text);
+    border: 1px solid var(--posts)
+}
+
+.bar p::first-letter,.bar a::first-letter {
+    text-decoration: underline
+}
+
+.bar a:hover {
+    border-right: 1px solid var(--borders2);
+    border-bottom: 1px solid var(--borders2);
+    cursor: pointer
+}
+
+.bar a:active,[class^="btn-"].act {
+    border-top: 1px solid var(--borders2);
+    border-left: 1px solid var(--borders2);
+    border-bottom: 1px solid var(--borders1);
+    border-right: 1px solid var(--borders1)
+}
+
+.t-wrap {
+    position: relative;
+    margin: 0;
+    padding: 0 10px 10px;
+    width: 100%
+}
+
+.tags {
+    width: 100%
+}
+
+.ptags a,.tags a {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    padding: 4px 7px;
+    background: var(--posts);
+    color: var(--text);
+    border: 1px solid var(--borders);
+    box-shadow: inset 1px 1px 0 var(--borders1);
+    word-break: keep-all
+}
+
+.tags a {
+    margin: 0 5px 5px 0
+}
+
+.ptags a:hover,.tags a:hover {
+    color: var(--text)
 }
 
 /* ---------- SKILL ---------- */
@@ -977,10 +1045,6 @@ body.dark [class^="btn_"].act, body.dark .btn.act, body.dark .tasks2 a:active { 
     width: calc(100% - 55px);
 }
 
-.center {
-    align-content: center;
-}
-
 .f-title {
     font-weight: 700;
 }
@@ -1015,6 +1079,10 @@ body.dark [class^="btn_"].act, body.dark .btn.act, body.dark .tasks2 a:active { 
     object-fit: cover;
 }
 
+[class^="project-info"] {
+    width: calc(33% - 1.5px);
+}
+
 .post-footer {
     padding: 0 10px 10px;
     color: var(--text);
@@ -1040,6 +1108,7 @@ body.dark [class^="btn_"].act, body.dark .btn.act, body.dark .tasks2 a:active { 
     margin: 0;
 }
 
+[class^="project-info"],
 [class^="post-info"],
 .time-info {
     border-top: 1px solid var(--borders2);
@@ -1051,7 +1120,12 @@ body.dark [class^="btn_"].act, body.dark .btn.act, body.dark .tasks2 a:active { 
 }
 
 [class^="post-info"] {
-    width: calc(33% - 1.5px);
+    width: calc(38% - 1.5px);
+}
+
+.time-info {
+    width: calc(24% - 1.5px);
+    border-radius: 0
 }
 
 .pinfo {

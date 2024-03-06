@@ -3,7 +3,7 @@ import Window_Content from '../Main Window/Window_Content';
 
 export default function Folder4() {
     return ( 
-        <section className="tab_e">
+        <section className="tab_f">
             <div className="no-posts">
                 <article>
                     <Window_Header title="folder 4 title" image="images/icons/folder.png" />

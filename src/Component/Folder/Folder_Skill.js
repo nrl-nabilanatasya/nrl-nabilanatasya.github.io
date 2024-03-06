@@ -120,15 +120,15 @@ const backend = (
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
             <div className="f-info flex center">
                 <div className="f-title">PHP</div>
-                <div className="f-name">Basic</div>
+                <div className="f-name">Intermediate</div>
             </div>
         </div>
 
         <div className="person flex justify">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeigniter/codeigniter-plain.svg" />
             <div className="f-info flex center">
-                <div className="f-title">codeigniter</div>
-                <div className="f-name">Basic</div>
+                <div className="f-title">Codeigniter 3</div>
+                <div className="f-name">Intermediate</div>
             </div>
         </div>
 
@@ -164,7 +164,7 @@ const database = (
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
             <div className="f-info flex center">
                 <div className="f-title">MySQL</div>
-                <div className="f-name">Basic</div>
+                <div className="f-name">Intermediate</div>
             </div>
         </div>
 

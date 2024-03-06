@@ -13,8 +13,9 @@ export default function WindowSidebar() {
         { fors: 'button_a', className: 'folder_a', image: 'images/icons/virtual-meeting.png', folder_name: 'About' },
         { fors: 'button_b', className: 'folder_b', image: 'images/icons/elearning.png', folder_name: 'Skill' },
         { fors: 'button_c', className: 'folder_c', image: 'images/icons/growth.png', folder_name: 'Experience' },
-        { fors: 'button_d', className: 'folder_d', image: 'images/icons/project.png', folder_name: 'Projects' },
-        { fors: 'button_e', className: 'folder_e', image: 'images/icons/folder.png', folder_name: 'Folder 4' },
+        { fors: 'button_d', className: 'folder_d', image: 'images/icons/project.png', folder_name: 'Project' },
+        { fors: 'button_e', className: 'folder_e', image: 'images/icons/blog.png', folder_name: 'Post' },
+        { fors: 'button_f', className: 'folder_f', image: 'images/icons/folder.png', folder_name: 'Folder 4' },
     ];
     
     return (
@@ -42,7 +43,7 @@ export default function WindowSidebar() {
                             <img src="images/icons/hyperlink.png" draggable="false" alt="" />Page Link
                         </Link>
 
-                        <label htmlFor='button_f' className='folder_f'>
+                        <label htmlFor='button_g' className='folder_g'>
                             <img src="images/icons/conversation.png" draggable="false" alt="" />Folder 5 
                         </label>
                     </div>

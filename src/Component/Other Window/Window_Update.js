@@ -19,6 +19,6 @@ export default function Window_Update({ isVisible, setUpdateVisible }) {
 // this folder content value
 const content = (
     <>
-        Best viewed on a larger screen.
+        Site under construction.
     </>
 );

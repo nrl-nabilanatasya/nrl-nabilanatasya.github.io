@@ -9,27 +9,7 @@ export default function Window_Start({ isVisible, setStartVisible }) {
             <div className={`start-wrap${isVisible ? ' visible' : ' hidden'}`}>
                 <article>
                     <Window_Header title="Start" image="images/icons/power-button.png" startVisible={isVisible} setStartVisible={setStartVisible} />
-                    <Window_Start_Content />
-                    {/* <div className="cover">
-                        <img src="https://assets.tumblr.com/images/x.gif?v=1" draggable="false" />
-                    </div>
-                    <div className="padding">
-                        <div className="por flex center square ">
-                            <img src="images/icons/power-button.png" draggable="false" />
-                        </div>
-                        <div className="desc">
-                            Some description here and 
-                            <a href="/" target="_blank">
-                                <b> links</b>
-                            </a>.
-                            <p><b>Bold</b>. <i>Italics</i>. <u>Underline</u>.</p> 
-                        </div>
-                    </div>
-                    <div className="pref">
-                        <a href="LINK URL">Discord</a>
-                        <a href="LINK URL">Twitch</a>
-                        <a href="LINK URL">Steam</a>
-                    </div> */}
+                    <Window_Start_Content content={content} />
                 </article>
             </div>
         </Draggable>
@@ -37,8 +17,8 @@ export default function Window_Start({ isVisible, setStartVisible }) {
 }
 
 // this folder content value
-// const content = (
-//     <>
-//         Start Content Here.
-//     </>
-// );
+const content = (
+    <>
+        Best viewed on a larger screen.
+    </>
+);

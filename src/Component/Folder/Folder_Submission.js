@@ -1,9 +1,9 @@
 import Window_Header from '../Main Window/Window_Header';
 import Window_Content from '../Main Window/Window_Content';
 
-export default function Folder5() {
+export default function Folder_Submission() {
     return ( 
-        <section className="tab_f">
+        <section className="tab_g">
             <article>
                 <Window_Header title="Ask Form" image="images/icons/conversation.png" />
                 <Window_Content content={content1} />

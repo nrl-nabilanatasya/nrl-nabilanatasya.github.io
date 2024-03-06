@@ -40,7 +40,9 @@ export const MobileButtonData = [
     { button: 'button_b', className: 'btn_b', title: 'Skill', image:'images/icons/elearning.png' },
     { button: 'button_c', className: 'btn_c', title: 'Experience', image:'images/icons/growth.png' },
     { button: 'button_d', className: 'btn_d', title: 'Projects', image:'images/icons/project.png' },
-    { button: 'button_e', className: 'btn_e', title: 'Folder 4', image:'images/icons/folder.png' },
+    { button: 'button_e', className: 'btn_e', title: 'Post', image:'images/icons/blog.png' },
+    { button: 'button_f', className: 'btn_f', title: 'Folder 4', image:'images/icons/folder.png' },
+    { button: 'button_g', className: 'btn_g', title: 'Folder 5', image:'images/icons/folder.png' },
 ]
 
 export default function Taskbar_Left({ startVisible, setStartVisible, mainVisible, setMainVisible, searchVisible, setSearchVisible, imageVisible, setImageVisible, updateVisible, setUpdateVisible }) {

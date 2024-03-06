@@ -8,15 +8,13 @@ import Window_Sidebar from './Window_Sidebar';
 import Folder_About from '../Folder/Folder_About';
 import Folder_Skill from '../Folder/Folder_Skill';
 import Folder_Project from '../Folder/Folder_Project';
+import Folder_Post from '../Folder/Folder_Post';
 import Folder4 from '../Folder/Folder4';
-import Folder5 from '../Folder/Folder5';
+import Folder_Submission from '../Folder/Folder_Submission';
 
 export default function Window_Main({ isVisible, setMainVisible }) {
-    const isLargeScreen = window.innerWidth > 850;
-    console.log(window.innerWidth);
 
     return ( 
-        // <Draggable>
         <div className={`package flex justify ${isVisible ? 'visible' : 'hidden'}`}>
             <div className="packhead">
                 <Window_Header title="Main Window" image="images/icons/workspace.png" mainVisible={isVisible} setMainVisible={setMainVisible} />
@@ -33,11 +31,11 @@ export default function Window_Main({ isVisible, setMainVisible }) {
                     <Folder_About />
                     <Folder_Skill />
                     <Folder_Project />
+                    <Folder_Post />
                     <Folder4 />
-                    <Folder5 />
+                    <Folder_Submission />
                 </div>
             </div>
         </div>
-        // </Draggable>
     );
 }

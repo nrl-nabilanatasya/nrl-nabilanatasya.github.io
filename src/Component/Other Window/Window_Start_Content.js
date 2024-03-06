@@ -1,4 +1,4 @@
-export default function Window_Start_Content() {
+export default function Window_Start_Content({ content }) {
     return (
         <>
             <div className="cover">
@@ -9,8 +9,7 @@ export default function Window_Start_Content() {
                     <img src="images/icons/power-button.png" draggable="false" />
                 </div>
                 <div className="desc">
-                    Some description here and <a href="/" target="_blank"><b> links</b></a>.
-                    <p><b>Bold</b>. <i>Italics</i>. <u>Underline</u>.</p> 
+                    {content}
                 </div>
             </div>
             <div className="pref">

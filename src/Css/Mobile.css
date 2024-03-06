@@ -136,7 +136,11 @@
     /* ****************************************************** */
     [data-theme="daynight"] body.light #button_a:checked~.taskbar>.tasks>.btn_a,
     [data-theme="daynight"] body.light #button_b:checked~.taskbar>.tasks>.btn_b,
-    [data-theme="daynight"] body.light #button_c:checked~.taskbar>.tasks>.btn_c {
+    [data-theme="daynight"] body.light #button_c:checked~.taskbar>.tasks>.btn_c,
+    [data-theme="daynight"] body.light #button_c:checked~.taskbar>.tasks>.btn_d,
+    [data-theme="daynight"] body.light #button_c:checked~.taskbar>.tasks>.btn_e,
+    [data-theme="daynight"] body.light #button_c:checked~.taskbar>.tasks>.btn_f,
+    [data-theme="daynight"] body.light #button_c:checked~.taskbar>.tasks>.btn_g {
         background: rgba(255,255,255,.12);
     }
 
@@ -145,7 +149,8 @@
     #button_c:checked~.taskbar>.tasks>.btn_c, 
     #button_d:checked~.taskbar>.tasks>.btn_d, 
     #button_e:checked~.taskbar>.tasks>.btn_e, 
-    #button_f:checked~.taskbar>.tasks>.btn_f {
+    #button_f:checked~.taskbar>.tasks>.btn_f,
+    #button_g:checked~.taskbar>.tasks>.btn_g {
         cursor: default;
         border-top: 1px solid var(--borders2);
         border-left: 1px solid var(--borders2);

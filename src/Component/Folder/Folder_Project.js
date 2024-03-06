@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import Window_Header from '../Main Window/Window_Header';
 import Window_Content from '../Main Window/Window_Content';
-import Window_Footer from '../Main Window/Window_Footer';
+import Folder_Project_Footer from './Folder_Project_Footer';
 
 // Importing content constants
 import { content1, content2, content3, content4 } from './Folder_Project_Content'; 
@@ -38,7 +38,7 @@ export default function Folder_Project() {
                         <article>
                             <Window_Header title={title} image="images/icons/project.png" />
                             <Window_Content content={content} />
-                            <Window_Footer />
+                            <Folder_Project_Footer />
                         </article>
                     </div>
                 ))}

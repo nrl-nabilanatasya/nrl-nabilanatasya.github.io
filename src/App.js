@@ -35,10 +35,10 @@ export default function App() {
     
     // show or hide window
     const [startVisible, setStartVisible] = useState(false);
-    const [mainVisible, setMainVisible] = useState(window.innerWidth < 850); //make the main window stay open for small screen
+    const [mainVisible, setMainVisible] = useState(true); //make the main window stay open for small screen, window.innerWidth < 850
     const [searchVisible, setSearchVisible] = useState(false);
     const [imageVisible, setImageVisible] = useState(false);
-    const [updateVisible, setUpdateVisible] = useState(false);
+    const [updateVisible, setUpdateVisible] = useState(true);
 
     return (
             <div className="container">
@@ -48,6 +48,7 @@ export default function App() {
                 <input type="radio" name="tabs-control" id="button_d" onChange={handleButtonChange} hidden />
                 <input type="radio" name="tabs-control" id="button_e" onChange={handleButtonChange} hidden />
                 <input type="radio" name="tabs-control" id="button_f" onChange={handleButtonChange} hidden />
+                <input type="radio" name="tabs-control" id="button_g" onChange={handleButtonChange} hidden />
                 
                 {/* TASKBAR */}
                 <Taskbar_Main 
