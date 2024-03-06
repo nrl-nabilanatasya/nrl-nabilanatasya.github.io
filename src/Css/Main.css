@@ -313,9 +313,9 @@ body.dark [class^="btn_"].act, body.dark .btn.act, body.dark .tasks2 a:active { 
 
 /* ---------- IMAGE WINDOW ---------- */
 .image-wrap {
-    left: 20px;
-    bottom: 80px;
-    width: 20vw
+    left: 400px;
+    bottom: 60px;
+    width: 13vw
 }
 
 /* ---------- START WINDOW ---------- */
@@ -643,7 +643,8 @@ body.dark [class^="btn_"].act, body.dark .btn.act, body.dark .tasks2 a:active { 
 }
 
 .inner-padding, 
-.sidebox { /* later check again at line 178 */
+.sidebox,
+.desc {
     padding: 10px;
     background: var(--captions);
     border: 1px solid;

@@ -26,7 +26,7 @@ export default function Folder_Project() {
     const hideOption = (filter) => selectedFilter !== filter && selectedFilter !== 'a_filter';
 
     return ( 
-        <section className="tab_c">
+        <section className="tab_d">
             <div className="explore flex justify">
                 <article>
                     <Window_Header title="Folder Filter" image="images/icons/project.png" />

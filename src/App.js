@@ -35,14 +35,13 @@ export default function App() {
     
     // show or hide window
     const [startVisible, setStartVisible] = useState(false);
-    const [mainVisible, setMainVisible] = useState(window.innerWidth < 850); //make the main window stay open for small screen, 
+    const [mainVisible, setMainVisible] = useState(window.innerWidth < 850); //make the main window stay open for small screen
     const [searchVisible, setSearchVisible] = useState(false);
     const [imageVisible, setImageVisible] = useState(false);
     const [updateVisible, setUpdateVisible] = useState(false);
 
     return (
             <div className="container">
-                {/* later add radio button here */}
                 <input type="radio" name="tabs-control" id="button_a" ref={buttonARef} onChange={handleButtonChange} hidden />
                 <input type="radio" name="tabs-control" id="button_b" onChange={handleButtonChange} hidden />
                 <input type="radio" name="tabs-control" id="button_c" onChange={handleButtonChange} hidden />

@@ -2,6 +2,7 @@ import Draggable from 'react-draggable';
 
 import Window_Header from './Window_Header';
 import Window_AddressBar from './Window_AddressBar';
+import Window_Mobile_Header from './Window_Mobile_Header';
 import Window_Sidebar from './Window_Sidebar';
 
 import Folder_About from '../Folder/Folder_About';
@@ -23,6 +24,7 @@ export default function Window_Main({ isVisible, setMainVisible }) {
             </div>
             
             {/* LATER ADD HEADER FOR MOBILE */}
+            <Window_Mobile_Header />
 
             <Window_Sidebar />
 
